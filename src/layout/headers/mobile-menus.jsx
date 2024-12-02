@@ -19,7 +19,7 @@ const MobileMenus = () => {
         <ul>
           {menu_data.map((menu, i) => (
             <React.Fragment key={i}>
-              {menu.has_dropdown && (
+              {/* {menu.has_dropdown && (
                 <li className="has-dropdown">
                   <Link href={menu.link}>{menu.title}</Link>
                   <ul
@@ -45,7 +45,7 @@ const MobileMenus = () => {
                     <i className="fal fa-plus"></i>
                   </a>
                 </li>
-              )}
+              )} */}
               {!menu.has_dropdown && (
                 <li>
                   <Link href={menu.link}>{menu.title}</Link>

@@ -1,84 +1,129 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import useTitleAnimation from "@/src/hooks/useTitleAnimation";
 import service_data from '@/src/data/service-data';
 import RightArrow from '@/src/svg/right-arrow';
 
-import img from "../../../../public/assets/img/service/sv-dashbord.png" 
-
 const service_content = {
-    title: "Explore Our Data Services",
-    sub_title: <>More than 15,000 companies trust and choose Itech</>,
+    bg_img: "/assets/img/service/service_bg.png",
+    // title_2: "Data Analysis Tools & Methods",
+    // des: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    // btn_text: "Work with Us"
+};
 
-    bg_img: "/assets/img/service/sv-bg.jpg",
-    title_2: <>Data Analysis <br /> Tools & Methods</>,
-    des: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
-    btn_text: "Work with Us",
-
-    
-
-}
-const {title, sub_title,bg_img, title_2, des, btn_text}  = service_content
+const { title, sub_title, bg_img, title_2, des, btn_text } = service_content;
 
 const ServicesArea = () => {
-    let titleRef = useRef(null)
+    const titleRef = useRef(null);
 
-   useTitleAnimation(titleRef)
+    // State to store the window width
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    // Update window width on client side
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+    }, []);
+
+    // Inline style for the content block
+    const topContentStyle = {
+        position: 'absolute',
+        top: '10px', // Position top-left initially
+        left: '10px',
+        color: '#fff',
+        padding: '20px',
+        zIndex: 2,
+        transition: 'all 0.3s ease-in-out',
+    };
+
+    // Inline style for responsiveness
+    const containerStyle = {
+        backgroundImage: `url(${bg_img})`,
+        width: '788px',  // Fixed width
+        height: '361px',  // Fixed height
+        position: 'relative',
+        backgroundSize: 'cover',  // Ensure the background image covers the container
+        backgroundPosition: 'center', 
+    };
+
+    const contentStyle = {
+        position: 'absolute',
+        top: '10px', // Initially top-left
+        left: '10px',
+        color: '#fff',
+        padding: '20px',
+        zIndex: 2,
+        transition: 'all 0.3s ease-in-out',
+    };
+
+    const headingStyle = {
+        fontSize: '24px',
+        fontWeight: 'bold',
+    };
+
+    const paragraphStyle = {
+        fontSize: '16px',
+        marginTop: '10px',
+    };
+
+    // Apply media query styles only on the client side
+    const combinedContentStyle = windowWidth <= 768
+        ? { ...contentStyle, position: 'absolute', bottom: '10px', right: '10px' } // Move to bottom-right on smaller screens
+        : contentStyle;
+
+    useTitleAnimation(titleRef);
+
     return (
         <>
-            <div className="tp-service__area p-relative fix">
-               <div className="tp-service__grey-shape grey-bg"></div>
-               <div className="container">
-                  <div className="row justify-content-center">
-                     <div className="col-lg-8">
-                        <div ref={titleRef} className="tp-service__section-box tp__title_anime mb-50 text-center tp-title-anim">
-                           <h2 className="tp-section-title">{title}</h2>
-                           <p>{sub_title}</p>
+            <div className="tp-service__area p-relative fix" style={{ backgroundColor: 'white' }}>
+                <div className="tp-service__grey-shape grey-bg"></div>
+                <div className="container">
+                    <div className="row justify-content-center" >
+                        <div className="col-lg-8">
+                            <div ref={titleRef} className="tp-service__section-box tp__title_anime mb-50 text-center tp-title-anim" >
+                                <h2 className="tp-section-title">{title}</h2>
+                                <p>{sub_title}</p>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div className="row">
-
-                    {service_data.slice(0,5).map((item, i)  => 
-                        <div key={i} className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay={item.delay}>
-                            <div className="tp-service__item mb-30">
-                                <div className="tp-service__icon">
-                                    <Image src={item.img} alt="theme-pure" />
-                                </div>
-                                <div className="tp-service__content">
-                                    <h3 className="tp-service__title-sm tp-yellow-color"><Link href="/service-details">{item.title}</Link></h3>
-                                    <p>{item.description}</p>
-                                </div>
-                                <div className="tp-service__link">
-                                    <Link href="/service-details">
-                                        <RightArrow /> 
-                                    </Link>
+                    </div>
+                    <div className="row">
+                         <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
+                            <div style={containerStyle}>
+                                <div className="tp-service__top-content" style={combinedContentStyle}>
+                                    <h3 style={headingStyle}>{title_2}</h3>
+                                    <p style={paragraphStyle}>{des}</p>
+                                    {/* Uncomment if needed */}
+                                    {/* <Link className="tp-btn-orange tp-btn-hover alt-color-white" href="/project-details">
+                                        <span>{btn_text}</span>
+                                        <b></b>
+                                    </Link> */}
                                 </div>
                             </div>
                         </div>
-                    )}
 
-                     <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                        <div className="tp-service__dashboard" 
-                        style={{backgroundImage: `url(${bg_img})`}} >
-                           <div className="tp-service__top-content">
-                              <h3 className="tp-service__title-white">{title_2}</h3>
-                              <p>{des}</p>
-                              <Link className="tp-btn-orange tp-btn-hover alt-color-white" href="/project-details">
-                                 <span>{btn_text}</span>
-                                 <b></b>
-                              </Link>
-                           </div>
-                           <div className="tp-service__dashdboard-sm-img">
-                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s" 
-                              src={img} alt="theme-pure" />
-                           </div>
-                        </div>
-                     </div>
+                        {service_data.slice(0, 7).map((item, i) =>
+                            <div key={i} className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay={item.delay}>
+                                <div className="tp-service__item mb-30">
+                                    <div className="tp-service__icon">
+                                        <Image src={item.img} alt="theme-pure" />
+                                    </div>
+                                    <div className="tp-service__content">
+                                        <h3 className="tp-service__title-sm tp-yellow-color"><Link href="/service-details">{item.title}</Link></h3>
+                                        <p>{item.description}</p>
+                                    </div>
+                                    <div className="tp-service__link">
+                                        <Link href="/service-details">
+                                            <RightArrow />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
 
-                  </div>
-               </div>
+                       
+
+                    </div>
+                </div>
             </div>
         </>
     );

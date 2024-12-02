@@ -1,66 +1,70 @@
-import { AppContext } from "@/src/context/ContextProvider";
-import VideoPopup from "@/src/modals/video-popup";
-import React, {useState, useRef, useContext} from "react";
+import { useEffect, useRef } from 'react';
 
+const VideoArea = ({ src, poster, style, className }) => {
+  const videoRef = useRef(null);
 
-const VideoArea = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const videoEl = useRef(null); 
-  const {handleMouseEnter,handleMouseLeave} = useContext(AppContext); 
-  
+  useEffect(() => {
+    if (videoRef.current) {
+      // Try to play the video
+      videoRef.current.play().catch((error) => {
+        if (error.name === 'NotAllowedError') {
+          videoRef.current.muted = true; // Mute if autoplay isn't allowed
+          videoRef.current.play().catch((e) => console.error(e));
+        }
+      });
+
+      // Replay video after it ends
+      const handleVideoEnd = () => {
+        videoRef.current.play().catch((e) => console.error(e));
+      };
+
+      videoRef.current.addEventListener('ended', handleVideoEnd);
+
+      // Cleanup listener on unmount
+      return () => {
+        if (videoRef.current) {
+          videoRef.current.removeEventListener('ended', handleVideoEnd);
+        }
+      };
+    }
+  }, []);
+
   return (
- 
-    <>
-      <div className="tp-vedio-area p-relative pt-120">
-        <div className="container-fluid">
-          <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <div className="tp-vedio-sction-box pb-70">
-                <h4 className="tp-vedio-title">
-                  The best customer relationship <br />
-                  management platform for just <br />
-                  about everything
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <div className="tp-vedio-wrap" >
-                <a
-                  className="popup-video tp-cursor-point-area" 
-                  onClick={() => setIsVideoOpen(true)}
-                  onMouseEnter={() => handleMouseEnter(true)}
-                  onMouseLeave={ () => handleMouseLeave(false)}
-                >
-                  <video                  
-                  className="play-video" 
-                  id="myVideo" 
-                  autoPlay 
-                  loop 
-                  playsInline
-                  muted
-                  alt="All the devices"
-                  src="http://weblearnbd.net/tphtml/videos/softec/softec-video.mp4"
-                  ref={videoEl}
-                  > 
-                  </video>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div style={{ ...defaultStyle, ...style }} className={`video-container ${className}`}>
+      <video
+        ref={videoRef}
+        className="responsive-video"
+        autoPlay
+        muted
+        playsInline
+        loop
+        poster={poster}
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* video modal start */}
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"_RpLvsA1SNM"}
-      />
-      {/* video modal end */}
-    </>
+      {/* Styles */}
+      <style jsx>{`
+        .video-container {
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .responsive-video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      `}</style>
+    </div>
   );
 };
 
-export default VideoArea;
+const defaultStyle = {
+  width: '372px',
+  height: '500px',
+};
+
+export default  VideoArea;

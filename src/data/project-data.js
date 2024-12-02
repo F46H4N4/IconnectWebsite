@@ -1,5 +1,5 @@
 
-import project_img_1 from "../../public/assets/img/project/project-img-2.jpg";
+import project_img_1 from "../../public/assets/img/project/diet.png";
 import project_brand_1 from "../../public/assets/img/project/project-brand-1.png";
 
 import project_img_2 from "../../public/assets/img/project/project-img-1.jpg";

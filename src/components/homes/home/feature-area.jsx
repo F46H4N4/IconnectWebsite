@@ -45,7 +45,7 @@ const FeatureArea = () => {
 
    return (
       <>
-         <div className="tp-feature__area tp-feature__pt-pb pt-165 pb-170 p-relative">
+         <div className="tp-feature__area tp-feature__pt-pb pb-170 p-relative" style={{ paddingTop:"74px" }}>
             <div className="tp-feature__bottom-shape">
                <Image style={{width: "auto", height: "auto"}} src={feature_bottom_shape} alt="them-pure" />
             </div>

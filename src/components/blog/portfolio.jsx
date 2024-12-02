@@ -30,7 +30,7 @@ const Portfolio = () => {
 
     return (
         <>
-            <div className="portfolio blog-grid-inner mb-80">
+            <div className="portfolio blog-grid-inner mb-80"style={{ paddingTop:"250px" }}>
                <div className="container">
                   <div className="row justify-content-center">
                      <div className="col-lg-8">

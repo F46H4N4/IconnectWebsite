@@ -3,7 +3,58 @@
 /*----------------------------------------*/
 /*  16. HERO CSS START
 /*----------------------------------------*/
+.heroArea {
+    position: relative;
+    background-color: #f5f5f5;
+    /* Optional background for the hero area */
+    overflow: hidden;
+}
 
+.leftShape {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.gradientBg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.heroWrapper {
+    position: relative;
+    z-index: 3;
+}
+
+.sliderContainer {
+    width: 100%;
+    overflow: hidden;
+    /* Ensures only one image is visible at a time */
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    /* Adjust based on the number of images (3 images => 300%) */
+    transform: translateX(0);
+    /* Initial position */
+    will-change: transform;
+}
+
+.slider img {
+    width: 100%;
+    /* Each image takes up full viewport width */
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
+    object-fit: cover;
+    /* Ensures the image scales nicely */
+}
 .tp-hero{
     &__pl-pr{
         padding-top: 63px;
@@ -463,7 +514,7 @@
         letter-spacing: 0.01em;
         color: #595B62;
         font-family: var(--tp-ff-urban);
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
         @media #{$xs}{
             font-size: 15px;
             line-height: 22px;

@@ -33,9 +33,12 @@ const Portfolio = () => {
             <div className="portfolio-area pt-100 pb-90">
                <div className="container">
                   <div className="row">
-                     <div className="col-xl-12">
-                        <div className="portfolio-filter masonary-menu text-center mb-35">
-                            {categories.map((cate, i) => (
+              <div className="col-xl-12">
+                <div className="portfolio-filter masonary-menu text-center mb-35">
+                  Our Software Products
+                <div>We have an experienced team of production and inspection personnel to ensure quality.</div>
+
+                            {/* {categories.map((cate, i) => (
                                 <button
                                 onClick={() => filterItems(cate)}
                                 key={i}
@@ -43,7 +46,7 @@ const Portfolio = () => {
                                 >
                                 <span>{cate}</span>
                                 </button>
-                            ))}    
+                            ))}     */}
                         </div>
                      </div>
                   </div>
