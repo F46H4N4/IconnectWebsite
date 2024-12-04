@@ -17,7 +17,7 @@ const {sub_title, title, description}  = service_content
 const ServiceArea = () => {
     return (
         <>
-           <div className="tp-service-area blue-bg p-relative pt-115 pb-105">
+           <div className="tp-service-area blue-bg p-relative" style={{ paddingTop:'74px' }}>
                <div className="tp-service-shape-right z-index">
                   <Image src={img} alt="theme-pure" />
                </div>

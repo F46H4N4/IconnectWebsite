@@ -4,41 +4,41 @@ import Link from 'next/link';
 import React from 'react';
 
 const job_data = {
-    sub_title: "Current Positions",
-    title: <>Join our Growing Team <br /> of Doers.</>,
-    carrer_title: "Open Positions",
+    sub_title: "Become part of our team",
+    title: <>Current Openings.</>,
+    carrer_title: "Become part of our team",
     carrer_info: <>Borem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque tristique <br/>
     Et amet risus enim accumsan sit purus sit.</>,
     job_info: [
         {
             id:1, 
             category: "Product Designer",
-            job_time: "Full-time",
-            job_location: "Newark, NJ",
+            job_time: "3 Years of Experience",
+            job_location: "Koratty Infopark, Kerala",
         },
         {
             id:2, 
-            category: "Software Engineer",
-            job_time: "Full-time",
-            job_location: "London, UK",
+            category: "UI/UX Designer",
+            job_time: "2 Years of Experience",
+            job_location: "Koratty Infopark, Kerala",
         },
         {
             id:3, 
-            category: "Junior Frontend Developer",
-            job_time: "Full-time",
-            job_location: "Brooklyn, NY",
+            category: "Graphic Designer",
+            job_time: "1 Years of Experience",
+            job_location: "Koratty Infopark, Kerala",
         },
         {
             id:4, 
-            category: "Finance Executive",
-            job_time: "Full-time",
-            job_location: "Newark, NJ",
+            category: "Marketing Specialist",
+            job_time: "2 Years of Experience",
+            job_location: "Koratty Infopark, Kerala",
         },
         {
             id:5, 
-            category: "Junior Copywriter",
-            job_time: "Full-time",
-            job_location: "London, UK",
+            category: "Php Laravel",
+            job_time: "4 Years of Experience",
+            job_location: "Koratty Infopark, Kerala",
         },
 
 
@@ -63,8 +63,9 @@ const JobArea = ({style_carrer}) => {
                               </> 
                               : 
                               <>
-                              <h4 className="inner-section-subtitle">{sub_title}</h4>
-                              <h3 className="tp-section-title">{title}</h3>
+                               <h3 className="tp-section-title">{title}</h3>
+                               <h4 className="inner-section-subtitle" style={{ color:"black" }}>{sub_title}</h4>
+
                               </>
 
                            }

@@ -227,13 +227,13 @@
 .tp-team-item {
     transition: .4s;
     & .tp-team-img{
-        background-color: #B2B6FF;
+        // background-color: #B2B6FF;
         border-radius: 50%;
         width: 180px;
         height: 180px;
         margin-left: auto;
         margin-right: auto;
-        overflow: hidden;
+        // overflow: hidden;
         & img{
             mix-blend-mode: luminosity;
             border-radius: 100px;

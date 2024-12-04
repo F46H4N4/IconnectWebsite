@@ -31,7 +31,8 @@ const CtaArea = () => {
         alignItems: "center",          // Center vertically
         height: "100vh",               // Ensure full viewport height
         paddingLeft: "5%",             // Add left padding to shift content to the right
-        paddingRight: "5%",            // Add right padding for symmetry
+        paddingRight: "5%",
+        paddingTop:'74px'// Add right padding for symmetry
       }}
     >
       <div className="container">

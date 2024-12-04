@@ -19,26 +19,33 @@ const {sub_title, tilte, info}  =  contact_content
 const ContactFormArea = () => {
     return (
         <>
-            <div className="contact-form-area pb-120">
+            <div className="contact-form-area pb-120 pt-50 giest" style={{ background:'white' }}>
                <div className="container">
                   <div className="row gx-0">
                      <div className="col-xl-5 col-lg-6">
                         <div className="contact-form-left">
                            <div className="contact-form-section-box pb-80">
-                              <h5 className="inner-section-subtitle">{sub_title}</h5>
-                              <h4 className="tp-section-title pb-10">{tilte}</h4>
-                              <p>{info}</p>
+                              <h5 className="inner-section-subtitle" >{sub_title}</h5>
+                              <h4 className="tp-section-title pb-10" >{tilte}</h4>
+                              <p style={{ fontFamily:"Plus Jakarta Sans" }}>{info}</p>
                            </div>
                            <div className="contact-form-social-box p-relative">
                               <div className="contact-form-social-item">
                                  <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                 <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                 <Link href="#"><i className="fab fa-linkedin-in"></i></Link>
+                           <Link href="#">
+                                 <Image
+                                 src="/assets/img/contact/twitter.png"
+                                 alt="Custom Icon"
+                                 width={15}
+                                 height={15}
+                                 />
+                               </Link>
+                               <Link href="#"><i className="fab fa-linkedin-in"></i></Link>
                                  <Link href="#"><i className="fab fa-instagram"></i></Link>
                               </div>
-                              <div className="contact-form-section-img">
+                              {/* <div className="contact-form-section-img">
                                  <Image src={img} alt="theme-pure" />
-                              </div>
+                              </div> */}
                            </div>
                         </div>
                      </div>

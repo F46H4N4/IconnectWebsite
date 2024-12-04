@@ -6,8 +6,8 @@ import React from 'react';
 
 
 const team_content = {
-    sub_title: "THE TEAM",
-    title: "Our Leaders",
+   //  sub_title: "THE TEAM",
+    title: "Our Team",
     des: <>Our clients are the companies and startups who <br /> make the world go round,!</>,
 }
 const {sub_title, title, des}  = team_content
@@ -45,7 +45,7 @@ const social_links = [
 const TeamArea = ({bg_style}) => {
     return (
         <>
-           <div className={`tp-team-area ${bg_style ? "grey-bg pt-120" : "blue-bg"} pb-95`}>   
+           <div className="tp-team-area pb-95" style={{ backgroundColor:'#FFF4E5' }}>   
                <div className="container">
                   <div className={`tp-team-section-wrapper ${bg_style && "tp-team-inner-section"} mb-70`}>
                      <div className="row align-items-end">
@@ -55,7 +55,7 @@ const TeamArea = ({bg_style}) => {
                               <h3 className={`${bg_style ? "tp-section-title mb-0 text-black" : "tp-section-title-4"}`}>{title}</h3>
                            </div>
                         </div>
-                        {bg_style ?
+                        {/* {bg_style ?
                            <div className="col-xl-6 col-lg-6 col-md-6">
                               <div className="tp-team-top-content text-center text-md-end">
                                  <Link className="tp-btn-inner tp-btn-hover alt-color-orange" href="/team-details">
@@ -70,7 +70,7 @@ const TeamArea = ({bg_style}) => {
                                  <p>{des}</p>
                               </div>
                            </div>
-                        }
+                        } */}
                      </div>
                   </div>
                   <div className="row">

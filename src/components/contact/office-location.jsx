@@ -1,69 +1,141 @@
 import React from 'react';
-
-
-import img_1 from "../../../public/assets/img/contact/contact-icon-sm-5.png";
-import img_2 from "../../../public/assets/img/contact/contact-icon-sm-6.png";
-import img_3 from "../../../public/assets/img/contact/contact-icon-sm-7.png";
 import Image from 'next/image';
-import Link from 'next/link';
 
-
-// office location data
-const office_data = [
-    {
-        id: 1, 
-        cls:"",
-        img: img_1,
-        location: "Colombia",
-        address: <>Bogota D.C., Colombia, b. a 181 <br /> C No. 930 Ap 202</>,
-    },
-    {
-        id: 2, 
-        cls:"p-relative",
-        img: img_2,
-        badge: "Main Office",
-        location: "France",
-        address: <>9 Pearse Street, Kinsale,Cork, <br /> P17 AH66, Ireland</>,
-    },
-    {
-        id: 3, 
-        cls:"",
-        img: img_3,
-        location: "Egypt",
-        address: <>Av. Cordoba 1309, 3'A, City of <br /> Buenos Aires, Egypt</>,
-    },
-]
+import location from "../../../public/assets/img/contact/location.png"; // Location Background Image
+import kuwaitFlag from "../../../public/assets/img/contact/kuwait.png"; // Kuwait Flag Image
+import bottomLeftImg from "../../../public/assets/img/contact/manwithlap.png"; // Bottom Left Image
 
 const OfficeLocation = () => {
     return (
-      <>
-        <div className="contact-info-area pb-90">
-          <div className="container">
-            <div className="row">
-              {office_data.map((item, i) => (
-                <div key={i} className="col-xl-4 col-lg-4 mb-30">
-                  <div className={`contact-info-item ${item.cls}`}>
-                    {item.badge && (
-                      <div className="contact-info-badge">
-                        <span>Main Office</span>
-                      </div>
-                    )}
-                    <div className="contact-info-img">
-                      <Image src={item.img} alt="theme-pure" />
+        <>
+            <div className="contact-info-area pb-90">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="contact-info-img-container">
+                                {/* Background Image */}
+                                <div className="background-image">
+                                    <Image
+                                        src={location}
+                                        alt="Location Background"
+                                        layout="fill" // Fill the container
+                                        objectFit="cover" // Ensure proportional scaling
+                                        priority={true} // Optimize loading
+                                    />
+                                </div>
+
+                                {/* Flag and Text */}
+                                <div className="header-content">
+                                    <Image
+                                        src={kuwaitFlag}
+                                        alt="Kuwait Flag"
+                                        width={128}
+                                        height={40}
+                                        className="kuwait-flag"
+                                    />
+                                    <p style={{ color:'white', fontSize:'18px'}}>Our Location</p>
+                                </div>
+
+                                {/* Address */}
+                                <div className="address">
+                                    <p style={{ color:'white', fontSize:'22px', lineHeight:'1.3'}}>
+                                        Al Mubarakiya, Oman Street, <br />
+                                        Behind Gulf Bank Head Office, <br />
+                                        Kuwait City 15258
+                                    </p>
+                                </div>
+
+                                {/* Man with Laptop Image */}
+                                <div className="bottom-image">
+                                    <Image
+                                        src={bottomLeftImg}
+                                        alt="Man with Laptop"
+                                        width={200}
+                                        height={150}
+                                        objectFit="contain"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="contact-info-title-box">
-                      <h5 className="contact-info-title-sm">
-                        <Link href="#">{item.location}</Link>
-                      </h5>
-                      <p>{item.address}</p>
-                    </div>
-                  </div>
                 </div>
-              ))}
             </div>
-          </div>
-        </div>
-      </>
+
+            {/* Scoped CSS */}
+            <style jsx>{`
+                .contact-info-area {
+                    padding-bottom: 90px;
+                }
+
+                .contact-info-img-container {
+                    position: relative;
+                    width: 100%;
+                    height: 410px; /* Default height for larger screens */
+                    overflow: hidden;
+                }
+
+                .background-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+
+                .header-content {
+                    position: absolute;
+                    bottom: 180px;
+                    left: 20px;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                }
+
+                .header-content p {
+                    margin-left: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .address {
+                    position: absolute;
+                    bottom: 60px;
+                    left: 20px;
+                    color: white;
+                    font-size: 16px;
+                }
+
+                .bottom-image {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                }
+
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                    .contact-info-img-container {
+                        // height: 100vh; /* Full height for smaller screens */
+                    }
+
+                    .header-content p {
+                        font-size: 14px; /* Adjust font size */
+                    }
+
+                    .address {
+                        font-size: 14px;
+                        bottom: 40px;
+                    }
+
+                    .bottom-image {
+                        width: 150px; /* Resize image */
+                        height: auto;
+                        bottom: 10px;
+                        right: 10px;
+                    }
+                }
+            `}</style>
+        </>
     );
 };
 

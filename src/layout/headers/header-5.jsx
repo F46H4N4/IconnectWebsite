@@ -5,7 +5,7 @@ import React,{useState} from 'react';
 import NavMenu from './nav-menu';
 import Image from 'next/image';
 
-import logo from "../../../public/assets/img/logo/logo-black.png";
+import logo from "../../../public/assets/img/logo/iConnect-Logo.png";
 
 const HeaderFive = () => {
    const {sticky}  =  useSticky()
@@ -32,11 +32,10 @@ const HeaderFive = () => {
                         <div className="col-xxl-2 col-xl-3 col-lg-2 col-md-8 col-6">
                            <div className="header-bottom__right header-five__btn d-flex align-items-center justify-content-end">
                               <div className="header-bottom__btn d-flex align-items-center">
-                                 <Link className="tp-btn-yellow inner-color tp-btn-hover alt-color-black d-none d-md-inline-block" 
-                                       href="/register">
-                                    <span className="white-text">Sign up Now</span>
-                                    <b></b>
-                                 </Link>
+                              <Link className="tp-btn-white inner-color tp-btn-hover alt-color-black d-none d-md-inline-block contact-us-link" href="/contact">
+                                 <span className="white-text">Contact Us</span>
+                                 <b></b>
+                              </Link>
                                  <a className="header-bottom__bar tp-menu-bar d-lg-none" 
                                   onClick={() => setSidebarOpen(true)}
                                  ><i className="fal fa-bars"></i></a>

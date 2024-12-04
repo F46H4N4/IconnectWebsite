@@ -22,18 +22,18 @@ const HomeFive = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="fix">
-            <HeroArea />
+            {/* <HeroArea />
             <VideoArea />
             <FunFactArea />
-            <ServiceArea />
+            <ServiceArea /> */}
             <CtaArea />
-            <PlanArea />
+            {/* <PlanArea />
             <TestimonialArea />
             <FeatureArea />
             <IntegrationArea />
-            <BusinessBox />
+            <BusinessBox /> */}
           </main>
-          <FooterFive bg_style={false} />
+          {/* <FooterFive bg_style={false} /> */}
         </div>
       </div>
     </ContextProvider>

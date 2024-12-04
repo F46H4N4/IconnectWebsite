@@ -7,21 +7,27 @@ const social_links = [
     target: "_blank",
     icon: "fab fa-facebook-f", 
   },
+  // {
+  //   link: "http://twitter.com",
+  //   target: "_blank",
+  //   icon: "fab fa-twitter", 
+  // },
   {
-    link: "http://twitter.com",
-    target: "_blank",
-    icon: "fab fa-twitter", 
-  },
+      link: "http://instagram.com",
+      target: "_blank",
+      icon: "fab fa-instagram",
+      label: "Instagram"
+    },
   {
     link: "https://www.linkedin.com",
     target: "_blank",
     icon: "fab fa-linkedin-in", 
   }, 
-  {
-    link: "https://www.vimeo.com",
-    target: "_blank",
-    icon: "fab fa-vimeo-v", 
-  },
+  // {
+  //   link: "https://www.vimeo.com",
+  //   target: "_blank",
+  //   icon: "fab fa-vimeo-v", 
+  // },
 ];
 
 const SocialLinks = () => {

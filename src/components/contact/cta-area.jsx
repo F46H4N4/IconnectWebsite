@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const cta_content = { 
-    bg_img: "/assets/img/cta/contact.png",
+    bg_img: "/assets/img/cta/connect-new.png",
     title: "Let's Connect",
     description: <>We create the best opportunities for your business.<br /></>,
     btn_text: "Contact us Now!",
@@ -13,7 +13,7 @@ const CtaArea = () => {
     return (
         <>
             <div>
-                {/* <div className="tp-cta></div> */}
+                <div className="tp-cta"></div>
                 <div className="container pt-50">
                     <div className="row">
                         <div className="col-12">
@@ -23,8 +23,6 @@ const CtaArea = () => {
                                     backgroundImage: `url(${bg_img})`,
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    width: '1220px',
-                                    height:'410px'
                                 }}
                             >
                                 <div className="tp-cta-content tp-inner-font text-center">

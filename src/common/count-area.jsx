@@ -5,23 +5,23 @@ const fun_fact_data = [
     {
         id: 1, 
         cls: "1",
-        count: 23,
+        count: 10,
         simble: "+",
         description: <>Years <br /> Of Experience</>
     },
     {
         id: 2, 
         cls: "2",
-        count: 300,
+        count: 99,
         simble: "%",
-        description: <>Year on <br /> year Growth</>
+        description: <>Customer <br /> Statisfaction</>
     },
     {
         id: 3, 
         cls: "3",
-        count: 12,
+        count: 350,
         simble: "+",
-        description: <>Countries <br /> Of Operation</>
+        description: <>Projects <br /> Completed</>
     },
 
 ]

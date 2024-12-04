@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import img_1 from "../../../public/assets/img/career/image-1.png";
-import img_2 from "../../../public/assets/img/career/image-2.png";
-import img_3 from "../../../public/assets/img/career/image-3.png";
-import img_4 from "../../../public/assets/img/career/image-4.png";
+import img_1 from "../../../public/assets/img/career/leftbanner.png";
+import img_2 from "../../../public/assets/img/career/middle.png";
+import img_3 from "../../../public/assets/img/career/rightbannerone.png";
+import img_4 from "../../../public/assets/img/career/rightbannertwo.png";
 import Image from "next/image";
 
  
@@ -22,7 +22,7 @@ const CarrerBanner = () => {
   }, []);
   return (
     <>
-      <div className="carrer-banner-area carrer-banner-space">
+      <div className="carrer-banner-area carrer-banner-space " style={{ paddingTop:'74px' }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-3 col-lg-3 col-md-6">
