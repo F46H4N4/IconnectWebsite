@@ -4,20 +4,20 @@ import React from 'react';
 import Slider from 'react-slick';
 
 // slider img import here
-import slider_img_1_1 from "../../../../public/assets/img/integration/integration-1.png";
-import slider_img_1_2 from "../../../../public/assets/img/integration/integration-2.png";
-import slider_img_1_3 from "../../../../public/assets/img/integration/integration-3.png";
-import slider_img_1_4 from "../../../../public/assets/img/integration/integration-4.png";
-import slider_img_2_1 from "../../../../public/assets/img/integration/integration-5.png";
-import slider_img_2_2 from "../../../../public/assets/img/integration/integration-6.png";
-import slider_img_2_3 from "../../../../public/assets/img/integration/integration-7.png";
-import slider_img_2_4 from "../../../../public/assets/img/integration/integration-8.png";
+import slider_img_1_1 from "../../../../public/assets/img/integration/aldurah.png";
+import slider_img_1_2 from "../../../../public/assets/img/integration/Al-Eid-Logistics_logo.png";
+import slider_img_1_3 from "../../../../public/assets/img/integration/almalek.png";
+import slider_img_1_4 from "../../../../public/assets/img/integration/alnour.png";
+import slider_img_2_1 from "../../../../public/assets/img/integration/arabiaselection.png";
+import slider_img_2_2 from "../../../../public/assets/img/integration/arabic.png";
+import slider_img_2_3 from "../../../../public/assets/img/integration/belmokhba.png";
+import slider_img_2_4 from "../../../../public/assets/img/integration/brunchkabab.png";
 
 const integration_content ={
-    sub_title: "Integration",
-    title: <>Integrated with Your <span>Favourite Apps</span></>,
-    int_title: <>Integrated with Your Favourite Apps</>,
-    btn_text: "See all Integrations",
+    sub_title: "our cllients",
+    title: <><span>The Faces of Our Success</span></>,
+    // int_title: <>Integrated with Your Favourite Apps</>,
+    // btn_text: "our clients",
     bg_img: "/assets/img/integration/integration-bg.jpg"
 }
 const {sub_title, title, int_title, btn_text, bg_img}  = integration_content
@@ -141,10 +141,10 @@ const IntegrationArea = ({style_integraton}) => {
                      </div>
                      <div className="col-xl-6 col-lg-4 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
                         <div className="tp-integration-btn text-lg-end text-start">
-                           <Link className="tp-btn-blue-lg tp-btn-hover alt-color-black" href="/integrations">
+                           {/* <Link className="tp-btn-blue-lg tp-btn-hover alt-color-black" href="/integrations">
                               <span>{btn_text}</span>
                               <b></b>
-                           </Link>
+                           </Link> */}
                         </div>
                      </div>
                   </div>

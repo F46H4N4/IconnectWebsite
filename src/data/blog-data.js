@@ -1,6 +1,6 @@
-import img_1 from "../../public/assets/img/blog/blog-1.jpg"
-import img_2 from "../../public/assets/img/blog/blog-2.jpg"
-import img_3 from "../../public/assets/img/blog/blog-3.jpg"
+import img_1 from "../../public/assets/img/products/productone.png"
+import img_2 from "../../public/assets/img/products/producttwo.png"
+import img_3 from "../../public/assets/img/products/productthree.png"
 
 import author_img_1 from "../../public/assets/img/blog/blog-avata-1.png";
 import author_img_2 from "../../public/assets/img/blog/blog-avata-2.png";
@@ -14,35 +14,35 @@ const blog_data = [
     {
         id: 1, 
         img: img_1,
-        category: "Crm Software",
-        color: "1",
-        date: "28 April, 2023",
-        title: <>How Chatbots Can Help You <br /> Drive More Sales</>,
-        author_img: author_img_1,
-        author_name: "Hilary Ouse",
-        job_title: "Founder & CEO Dulalix"
+        // category: "Crm Software",
+        // color: "1",
+        // date: "28 April, 2023",
+        title: <>Electronics</>,
+        // author_img: author_img_1,
+        // author_name: "Hilary Ouse",
+        // job_title: "Founder & CEO Dulalix"
     },
     {
         id: 2, 
         img: img_2,
-        category: "Sales Tools",
-        color: "2",
-        date: "28 April, 2023",
-        title: <>6 Tips for Personal Selling that Guarantee Success in 2023</>,
-        author_img: author_img_2,
-        author_name: "Rudra Ghosh",
-        job_title: "Founder & CEO Dulalix"
+        // category: "Sales Tools",
+        // color: "2",
+        // date: "28 April, 2023",
+        title: <>Software</>,
+        // author_img: author_img_2,
+        // author_name: "Rudra Ghosh",
+        // job_title: "Founder & CEO Dulalix"
     },
     {
         id: 3, 
         img: img_3,
-        category: "Sales Management",
-        color: "3",
-        date: "28 April, 2023",
-        title: <>How Chatbots Can Help You <br /> Drive More Sales</>,
-        author_img: author_img_3,
-        author_name: "Penny Tool",
-        job_title: "Founder & CEO Dulalix"
+        // category: "Sales Management",
+        // color: "3",
+        // date: "28 April, 2023",
+        title: <>Hardware</>,
+        // author_img: author_img_3,
+        // author_name: "Penny Tool",
+        // job_title: "Founder & CEO Dulalix"
     },
 
     // home 04

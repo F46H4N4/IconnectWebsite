@@ -96,7 +96,7 @@
             font-size: 18px;
             line-height: 28px;
             @media #{$md,$xs,$lg}{
-                display: none;
+                // display: none;
             }
         }
     }
@@ -126,7 +126,7 @@
                     border-radius: 50%;
                     font-size: 8px;
                     color: var(--tp-common-white);
-                    background-color: var(--tp-common-red);
+                    background-color: var(--tp-common-green);
                     font-weight: 400;
                 }
             }

@@ -7,11 +7,11 @@ import ServiceIconsix from "../svg/service/service-icon-6"
 import ServiceIconSeven from "../svg/service/service-icon-7"
 
 // images import  
-import img_1 from "../../public/assets/img/service/sv-icon-1.png";
-import img_2 from "../../public/assets/img/service/sv-icon-2.png";
-import img_3 from "../../public/assets/img/service/sv-icon-3.png";
-import img_4 from "../../public/assets/img/service/sv-icon-4.png";
-import img_5 from "../../public/assets/img/service/sv-icon-5.png";
+import img_1 from "../../public/assets/img/service/vector.png";
+import img_2 from "../../public/assets/img/service/Vectorone.png";
+import img_3 from "../../public/assets/img/service/Vectorthree.png";
+import img_4 from "../../public/assets/img/service/Vectorfour.png";
+import img_5 from "../../public/assets/img/service/Vectorfive.png";
 // for home 04
 import icon_1 from "../../public/assets/img/service/sv-icon-4-1.png"
 import icon_2 from "../../public/assets/img/service/sv-icon-4-2.png"
@@ -19,10 +19,10 @@ import icon_3 from "../../public/assets/img/service/sv-icon-4-3.png"
 import icon_4 from "../../public/assets/img/service/sv-icon-4-4.png"
 
 // for home 05
-import img_6 from "../../public/assets/img/service/sv-icon-5-1.png";
-import img_7 from "../../public/assets/img/service/sv-icon-5-2.png";
-import img_8 from "../../public/assets/img/service/sv-icon-5-3.png";
-import img_9 from "../../public/assets/img/service/sv-icon-5-4.png";
+import img_6 from "../../public/assets/img/service/Vectorsix.png";
+import img_7 from "../../public/assets/img/service/Vectorseven.png";
+import img_8 from "../../public/assets/img/service/Vectoreight.png";
+import img_9 from "../../public/assets/img/service/Vectornine.png";
 
 // import img_10 from "../../public/";
 // import img_11 from "../../public/";
@@ -39,7 +39,7 @@ const  service_data = [
     {
         id: 1,
         icon: img_1,
-        img: img_1,
+        // img: img_1,
         title: "Secure, flexible payment systems.",
         description: <>Lorem Ipsum is simply dummy text <br /> of the printing</>,
         delay: ".4s",
@@ -182,8 +182,8 @@ const  service_data = [
     },
     {
         id: 15,
-        icon: img_7,
-        img: img_7,
+        icon: img_8,
+        // img: img_7,
         title: <>Real-time Master <br />  Planning</>,
         sub_title: "Cloud Backup",
         cls: "4",
@@ -194,70 +194,70 @@ const  service_data = [
         id: 16,
         icon: img_8,
         img: img_8,
-        title: <>Easy Contract <br /> Manufacturing</>,
+        title: <>SECURITY SOLUTION</>,
         sub_title: "Cloud Backup",
         cls: "4",
-        description: <>Track materials and stock for outsourced purchase orders</>,
+        description: <>Advanced security for home & business.</>,
         delay: ".9s",
     },
     {
         id: 17,
         icon: img_9,
         img: img_9,
-        title: <>Omnichannel <br /> Order Management</>,
+        title: <>BUSINESS SOLUTION</>,
         sub_title: "Cloud Backup",
         cls: "4",
-        description: <>Track materials and stock for outsourced purchase orders</>,
+        description: <>Streamline operations, boost success.</>,
         delay: ".9s",
     },
 
     // service page
     {
         id: 18,
-        icon: <ServiceIconOne />,
-        img: <ServiceIconOne />,
-        title: "Project management jamil",
-        description: <>Automate Workflows <br /> and Monitor your Sales.</>,
+        icon: img_1,
+        // img: <ServiceIconOne />,
+        title: "PAYMENT SOLUTION",
+        description: <>Secure, flexible payment systems.</>,
         delay: ".9s",
     },
     {
         id: 19,
-        icon: <ServiceIconTwo />,
-        img: <ServiceIconTwo />,
-        title: "Sales analytics",
-        description: <>Track your Marketing to see the best Results.</>,
+        icon: img_2,
+        // img: <ServiceIconTwo />,
+        title: "ERP APPLICATIONS",
+        description: <>Simplify management, enhance efficiency.</>,
         delay: ".9s",
     },
     {
         id: 20,
-        icon: <ServiceIconThree />,
-        img: <ServiceIconThree />,
-        title: "Easy Invoicing",
-        description: <>Automate recurring invoices and save time.</>,
+        icon: img_3,
+        // img: <ServiceIconThree />,
+        title: "E-COMMERCE",
+        description: <>Sell smarter with tailored solutions.</>,
         delay: ".9s",
     },
     {
         id: 21,
-        icon: <ServiceIconFoure/>,
-        img: <ServiceIconFoure />,
-        title: "Complete Visibility",
-        description: <>Get real-time visibility into every expense.</>,
+        icon: img_4,
+        // img: <ServiceIconFoure />,
+        title: "WEB DEVELOPMENT",
+        description: <>Modern websites for your growth.</>,
         delay: ".9s",
     },
     
     {
         id: 22,
-        icon: <ServiceIconFive/>,
-        img: <ServiceIconFive />,
-        title: "FIELDS OPTION",
-        description: <>Quick & Easy Repeater Fields Option</>,
+        icon: img_5,
+        // img: <ServiceIconFive />,
+        title: "APP DEVELOPMENT",
+        description: <>Custom mobile apps, built smartly.</>,
         delay: ".9s",
     },
     
     {
         id: 23,
-        icon: <ServiceIconsix/>,
-        img: <ServiceIconsix />,
+        icon: img_6,
+        // img: <ServiceIconsix />,
         title: "Safe Online Services",
         description: <>Online services to view company level.</>,
         delay: ".9s",
@@ -265,8 +265,8 @@ const  service_data = [
     
     {
         id: 24,
-        icon: <ServiceIconSeven/>,
-        img: <ServiceIconSeven />,
+        icon: img_7,
+        // img: <ServiceIconSeven />,
         title: "Online marketing",
         description: <>Get real-time visibility into every expense.</>,
         delay: ".9s",

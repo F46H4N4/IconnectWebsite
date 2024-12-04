@@ -52,33 +52,27 @@ const AboutArea = () => {
       style={{
         position: 'relative',
         height: '100vh',
-        width: '100vw',
+        width: '100%',
         overflow: 'hidden',
-        BoxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)'
-
-
       }}
     >
       {/* Background Video */}
-     <video
+      <video
         src="/assets/earth.mp4"
         autoPlay
         loop
         muted
         style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            zIndex: -1,
-            filter: 'brightness(80%)', // Optional: Reduce brightness for contrast
-            boxShadow: '0 0 50px 20px rgba(0, 0, 0, 0.8)', // Add shadow to video
-
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+          filter: 'brightness(80%)',
         }}
-        />
+      />
 
       {/* Content Container */}
       <div 
@@ -94,117 +88,44 @@ const AboutArea = () => {
           alignItems: 'flex-start',
         }}
       >
-        {/* Heading with Typing Animation */}
-        <div
-          className="typing-animation"
-          style={{
-            color: '#fff',
-            fontSize: '55px',
-            fontWeight: 'normal',
-            zIndex: 2,
-            textAlign: 'left',
-            marginBottom: '20px',
-          }}
-        >
+        {/* Heading */}
+        <div className="typing-animation">
           <span>Who We Are</span>
         </div>
 
-        {/* Main Content Area */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            width: '100%',
-            gap: '40px',
-          }}
-        >
-          {/* Paragraph Content on the Left with Slide-In Animation */}
-          <div
-            className="slide-in-left"
-            style={{
-              flex: 1,
-              textAlign: 'left',
-            }}
-          >
-            <p style={{ 
-              fontSize: '18px', 
-              color: '#fff', 
-              lineHeight: '1.6',
-              textAlign: 'justify',
-              width: '500px'
-            }}>
-   iConnect, a leading tech provider in Kuwait, delivers innovative IT services, hardware, and electronic solutions. We specialize in software, mobile apps, digital platforms, payment solutions, e-commerce, CCTV, and biometric systems. Our scalable solutions enhance efficiency, security, and growth, showcasing a commitment to excellence and innovation.            </p>
-          </div>
-
-          {/* Fixed Text Content on the Right */}
-          <div
-            style={{
-              position: 'fixed',
-              top: '50%',
-              right: '10%',
-              transform: 'translateY(-50%)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-start',
-              zIndex: 2,
-              height: '100px',
-            }}
-          >
-            {about_content.image_texts.map((text, i) => {
-              const parts = text.split(' ');
-              const firstPart = parts[0];
-              const restOfText = parts.slice(1).join(' ');
-
-              return (
-                <div
-                  key={i}
-                  className={`tp-about__text-wrapper ${activeIndex === i ? 'active' : ''}`}
-                  style={{
-                    position: 'absolute',
-                    opacity: activeIndex === i ? 1 : 0,
-                    transition: 'opacity 0.5s ease',
-                    zIndex: activeIndex === i ? 10 : 1,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    // paddingRight:'20px'
-                  }}
-                >
-                  <div style={{ 
-                    fontSize: '100px', 
-                    color: '#fff', 
-                    fontWeight: 'bold',
-                    lineHeight: '1.2'
-                  }}>
-                    {firstPart}
-                  </div>
-                  <p style={{ 
-                    fontSize: '24px', 
-                    color: '#fff', 
-                    lineHeight: '1.6' 
-                  }}>
-                    {restOfText}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+        {/* Main Content */}
+        <div className="main-content">
+          <p>
+            iConnect, a leading tech provider in Kuwait, delivers innovative IT services, hardware, and electronic solutions. We specialize in software, mobile apps, digital platforms, payment solutions, e-commerce, CCTV, and biometric systems. Our scalable solutions enhance efficiency, security, and growth, showcasing a commitment to excellence and innovation.
+          </p>
         </div>
       </div>
 
       {/* Global CSS */}
       <style jsx global>{`
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-100%);
+        @media (max-width: 768px) {
+          #about-section {
+            height: auto;
+            padding: 50px 20px;
           }
-          to {
-            opacity: 1;
-            transform: translateX(0);
+
+          .typing-animation span {
+            font-size: 24px;
           }
+
+          .main-content p {
+            font-size: 16px;
+            width: 100%;
+          }
+        }
+
+        .typing-animation span {
+          font-size: 55px;
+          color: #fff;
+          font-weight: normal;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: typing 2s steps(30) 1s forwards;
         }
 
         @keyframes typing {
@@ -216,48 +137,11 @@ const AboutArea = () => {
           }
         }
 
-        .slide-in-left {
-          animation: slideInLeft 1s ease-out forwards;
-          opacity: 0;
-        }
-
-        .typing-animation {
-          display: inline-block;
-          white-space: nowrap;
-          overflow: hidden;
-          width: 0;
-          animation: typing 2s steps(30) 1s forwards;
-          animation-fill-mode: forwards;
-        }
-
-        @media (max-width: 768px) {
-          #about-section {
-            position: relative;
-            height: auto;
-            padding: 50px 20px;
-          }
-
-          .typing-animation {
-            font-size: 24px;
-            text-align: center;
-          }
-
-          .slide-in-left p {
-            font-size: 16px;
-            width: 100%;
-            text-align: center;
-          }
-
-          .tp-about__text-wrapper {
-            position: relative;
-            right: 0;
-            text-align: center;
-            font-size: 28px;
-          }
-
-          .tp-about__text-wrapper div {
-            font-size: 36px;
-          }
+        .main-content p {
+          font-size: 18px;
+          color: #fff;
+          line-height: 1.6;
+          text-align: justify;
         }
       `}</style>
     </div>

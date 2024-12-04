@@ -58,14 +58,14 @@ const TestimonialArea = () => {
    return (
       <>
          <div className="tp-testimonial-area pt-130 pb-130 fix"
-            style={{ backgroundImage: `url(${bg_img})` }}
+            style={{ backgroundColor: "#FFFAF5" }}
          >
             <div className="container">
                <div className="row align-items-end tp-testimonial-five-section-space">
                   <div className="col-md-8">
                      <div className="tp-testimonial-five-section-box">
-                        <span className="tp-section-subtitle-5">{sub_title}</span>
-                        <h3 className="tp-section-title-5">{title}</h3>
+                        <span className="tp-section-subtitle-5" style={{ color:'black' }}>{sub_title}</span>
+                        <h3 className="tp-section-title-5" style={{ color:'black' }}>{title}</h3>
                      </div>
                   </div>
                   <div className="col-md-4">

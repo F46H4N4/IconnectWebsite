@@ -12,7 +12,7 @@ const BlogArea = () => {
                      <div className="col-xl-5">
                         <div className="tp-blog-section-box text-center mb-50">
                            <h3 className="tp-section-title-3">
-                            Our Latest <span>News and Articles</span>
+                            <span>Our Products</span>
                            </h3>
                         </div>
                      </div>
