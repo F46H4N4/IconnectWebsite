@@ -18,7 +18,8 @@ const BreadcrumbTwo = ({ title, innertitle, team_details, career_details }) => {
  useTitleAnimation(subtitleRef);
   return (
     <>
-      <div className="breadcrumb__area breadcrumb-height p-relative blue-bg-2">
+      <div className="breadcrumb__area breadcrumb-height p-relative"  style={{ backgroundColor: "#CE883D"  }}
+>
         <div className="breadcrumb__shape-1">
           <Image src={shape_1} alt="theme-pure" />
         </div>

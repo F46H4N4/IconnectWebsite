@@ -63,7 +63,7 @@ const Portfolio = () => {
               key={i}
               className="col-xl-4 col-lg-6 col-md-6 col-sm-6 grid-item"
             >
-              <Link href="/project-details">
+             <Link href={`${item.slug}-project-details`}>
                 {/* <a className="block-link"> */}
                   <div className="inner-project-item mb-30">
                     <div className="inner-project-img fix p-relative">
@@ -92,7 +92,7 @@ const Portfolio = () => {
 
           {/* View More Link */}
           <div className="view-more-link" style={{ textDecoration: 'underline', color: "#1F1D1D" }}>
-            <Link href="/portfolio">
+            <Link href="/project">
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 View More
                 <Image

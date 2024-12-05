@@ -28,7 +28,7 @@ const Service = () => {
             {/* <Portfolio /> */}
             <ServiceArea />
             <ImpactArea />
-            <Trustportion />
+            <Trustportion style={{ paddingTop:'74px' }} />
           </main>
         </div>
         <Footer />

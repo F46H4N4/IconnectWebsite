@@ -22,7 +22,7 @@ const BlogArea = () => {
                             <div
                                 key={i}
                                 className="col-xl-4 col-lg-4 col-md-6 mb-60"
-                                onClick={() => (window.location.href = `/${item.slug}-details`)} // Navigate dynamically
+                                onClick={() => (window.location.href = `/${item.slug}`)} // Navigate dynamically
                                 style={{ cursor: 'pointer' }} // Indicate the block is clickable
                             >
                                 <div className="tp-blog-item">
@@ -48,7 +48,7 @@ const BlogArea = () => {
 
                                     {/* Learn More Link */}
                                     <div className="tp-blog-author-info-box d-flex align-items-center">
-                                        <Link href={`/${item.slug}-details`} className="learn-more-link" style={{ color:"#130DE5" }}>
+                                        <Link href={`/${item.slug}`} className="learn-more-link" style={{ color:"#130DE5" }}>
                                             Learn More <i className="fas fa-arrow-right" style={{ color:"#130DE5", paddingLeft:'2px' }}></i>
                                         </Link>
                                     </div>

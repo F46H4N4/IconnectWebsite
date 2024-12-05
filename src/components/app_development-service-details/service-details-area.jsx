@@ -9,11 +9,12 @@ const service_details_content = {
     category_title: "Service Category",
    categories: [
         { id: 1, category: "Web Development", cls: "" , link:"/web-development-service-details"},
-        { id: 2, category: "Web Hosting", cls: "" , link:"/web-hosting-service-details" },
-        { id: 3, category: "Outsourcing Service", cls: "", link:"/outsource-service-details" },
+        { id: 2, category: "Payment Solution", cls: "" , link:"/paymentsolution-service-details" },
+        { id: 3, category: "Security Solution", cls: "", link:"/securitysolution-service-details" },
         { id: 4, category: "App Development", cls: "active", link:"/app_development-service-details" },
         { id: 5, category: "Buisness Solution", cls: "", link:"/buisness-service-details" },
-        { id: 6, category: "E-Commerce", cls: "", link:"/e-commerce-service-details" },
+        { id: 6, category: "E-Commerce", cls: "", link: "/e-commerce-service-details" },
+        { id: 7, category: "ERP Applications", cls: "", link: "/erp-service-details" },
 
     ],
     videos: [
@@ -23,7 +24,7 @@ const service_details_content = {
     overview_title: "Service Overview",
     overview_des: (
         <>
-           At Amiyon, we excel in delivering end-to-end app development solutions tailored to your business needs. From intuitive mobile apps to complex enterprise solutions, our expertise ensures scalable, secure, and user-friendly applications that drive innovation and engagement.
+           We excel in delivering end-to-end app development solutions tailored to your business needs. From intuitive mobile apps to complex enterprise solutions, our expertise ensures scalable, secure, and user-friendly applications that drive innovation and engagement.
         </>
     ),
     overview_list: [

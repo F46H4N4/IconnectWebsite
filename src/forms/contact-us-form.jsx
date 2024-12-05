@@ -33,7 +33,7 @@ const ContactUsForm = () => {
     setIsSubmitting(true);
     setErrorMessage('');
     
-    try {
+        try {
       await emailjs.send(
         'service_vqamdie',
         'template_3744asb', 
@@ -43,8 +43,10 @@ const ContactUsForm = () => {
           phone: formData.phone,
           inquiry: formData.inquiry,
           message: formData.message
-        }
+        },
+        '4oZhQBYXGSKWdRHWn'
       );
+      
       
       // Success handling
       setErrorMessage('Message sent successfully!');

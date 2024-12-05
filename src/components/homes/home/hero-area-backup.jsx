@@ -11,7 +11,7 @@ import img_2 from "../../../../public/assets/swipe.gif";
 
 const hero_content = {
   title_1: <><span>Most Trusted Digital Partner</span></>,
-  info: <>Softec provides all customer management service within one software. <br /> Our landing works on all devices.</>,
+  info: <><span>Empowering Your Vision, Securing Your Future – Your Most Trusted Digital Partner.</span></>,
 };
 const { title_1, info } = hero_content;
 

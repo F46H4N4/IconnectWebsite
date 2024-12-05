@@ -14,8 +14,10 @@ const { title, bg_img, service_title, service_info } = service_content;
 const ServiceArea = () => {
   const router = useRouter();
 
-  const navigateToDetails = () => {
-    router.push('/service-details');
+  // Updated navigateToDetails function to append '-service-details' to the slug
+  const navigateToDetails = (slug) => {
+    // Navigate to the slug with '-service-details' appended
+    router.push(`/${slug}-service-details`);
   };
 
   return (
@@ -34,7 +36,7 @@ const ServiceArea = () => {
             <div className="col-xl-8 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
               <div
                 className="tp-service-3-item mb-30 p-relative z-index"
-                onClick={navigateToDetails} // Navigate when the block is clicked
+                onClick={() => navigateToDetails('service-main')} // Replace with actual slug
                 style={{
                   backgroundImage: `url(${bg_img})`,
                   backgroundSize: 'cover',
@@ -51,7 +53,7 @@ const ServiceArea = () => {
                   <h4 className="tp-service-3-title-sm">{service_info}</h4>
                 </div>
                 <div className="tp-service-3-btn">
-                  <button className="tp-btn-white-solid" onClick={navigateToDetails}>
+                  <button className="tp-btn-white-solid" onClick={() => navigateToDetails('service-main')}>
                     Learn More
                   </button>
                 </div>
@@ -68,7 +70,7 @@ const ServiceArea = () => {
               >
                 <div
                   className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between"
-                  onClick={navigateToDetails}
+                  onClick={() => navigateToDetails(item.slug)} // Pass the slug dynamically here
                   style={{ cursor: 'pointer' }}
                 >
                   <div className="tp-service-sm-icon">

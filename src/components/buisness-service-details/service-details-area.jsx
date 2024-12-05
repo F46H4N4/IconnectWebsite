@@ -9,12 +9,13 @@ const service_details_content = {
     category_title: "Service Category",
     categories: [
         { id: 1, category: "Web Development", cls: "" , link:"/web-development-service-details"},
-        { id: 2, category: "Web Hosting", cls: "" , link:"/web-hosting-service-details" },
-        { id: 3, category: "Outsourcing Service", cls: "", link:"/outsource-service-details" },
+        { id: 2, category: "Payment Solution", cls: "" , link:"/paymentsolution-service-details" },
+        { id: 3, category: "Security Solution", cls: "", link:"/securitysolution-service-details" },
         { id: 4, category: "App Development", cls: "", link:"/app_development-service-details" },
         { id: 5, category: "Buisness Solution", cls: "active", link:"/buisness-service-details" },
-        { id: 6, category: "E-Commerce", cls: "", link:"/e-commerce-service-details" },
-
+        { id: 6, category: "E-Commerce", cls: "", link: "/e-commerce-service-details" },
+        { id: 7, category: "ERP Applications", cls: "", link: "/erp-service-details" },
+    
     ],
     videos: [
         { id: 1, src: '/assets/bs.mp4', poster: '/assets/poster1.jpg', title: "Web Development Overview" },
@@ -23,7 +24,7 @@ const service_details_content = {
     overview_title: "Service Overview",
     overview_des: (
         <>
-          At Amiyon, we offer comprehensive business solutions tailored to streamline operations and drive growth.
+          We offer comprehensive business solutions tailored to streamline operations and drive growth.
           From process automation to enterprise-grade software, our services are designed to address the unique challenges businesses face, enabling efficiency and innovation.
         </>
     ),

@@ -13,7 +13,9 @@ const cta_content = {
   ),
   des: (
     <>
-      At iConnect, we empower businesses with customized solutions that are ready for the future. By partnering with SMEs, we drive growth, enhance efficiency, and cater to unique needs with tailored strategies. Our focus is on risk mitigation and helping businesses thrive in competitive markets.
+      At iConnect, we empower businesses with customized solutions designed for tomorrow. Partnering with SMEs, we drive growth, enhance efficiency, and address unique needs with tailored strategies. Our expertise focuses on mitigating risks and helping businesses thrive in competitive markets.
+
+With a deep understanding of industry trends and technological advancements, we deliver scalable solutions that adapt to evolving demands. From streamlining operations to fortifying digital security, our services are built to foster innovation and resilience. At iConnect, we’re not just a service provider – we’re your strategic ally in navigating challenges and seizing opportunities for long-term success
     </>
   ),
 };
@@ -29,7 +31,7 @@ const CtaArea = () => {
         display: "flex",
         justifyContent: "flex-start",  // Align to the left
         alignItems: "center",          // Center vertically
-        height: "100vh",               // Ensure full viewport height
+        // height: "100vh",               // Ensure full viewport height
         paddingLeft: "5%",             // Add left padding to shift content to the right
         paddingRight: "5%",
         paddingTop:'74px'// Add right padding for symmetry
