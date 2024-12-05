@@ -6,7 +6,7 @@ import NavMenu from './nav-menu';
 import Image from 'next/image';
 
 
-import logo from "../../../public/assets/img/logo/iconnect-logo.svg"
+import logo from "../../../public/assets/img/logo/iConnect-black-Logo.png"
 
 const HeaderThree = () => {
 

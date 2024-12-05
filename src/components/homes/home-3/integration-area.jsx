@@ -3,15 +3,56 @@ import Link from 'next/link';
 import React from 'react';
 import Slider from 'react-slick';
 
+// import slider_img_1_1 from "../../../../public/assets/img/integration/integration-1.png";
+// import slider_img_1_2 from "../../../../public/assets/img/logo/two.png";
+// import slider_img_1_3 from "../../../../public/assets/img/logo/three.png";
+// import slider_img_1_4 from "../../../../public/assets/img/logo/four.png";
 // slider img import here
-import slider_img_1_1 from "../../../../public/assets/img/integration/aldurah.png";
-import slider_img_1_2 from "../../../../public/assets/img/integration/Al-Eid-Logistics_logo.png";
-import slider_img_1_3 from "../../../../public/assets/img/integration/almalek.png";
-import slider_img_1_4 from "../../../../public/assets/img/integration/alnour.png";
-import slider_img_2_1 from "../../../../public/assets/img/integration/arabiaselection.png";
-import slider_img_2_2 from "../../../../public/assets/img/integration/arabic.png";
-import slider_img_2_3 from "../../../../public/assets/img/integration/belmokhba.png";
-import slider_img_2_4 from "../../../../public/assets/img/integration/brunchkabab.png";
+import slider_img_1_1 from "../../../../public/assets/img/logo/one.png";
+import slider_img_1_2 from "../../../../public/assets/img/logo/two.png";
+import slider_img_1_3 from "../../../../public/assets/img/logo/three.png";
+import slider_img_1_4 from "../../../../public/assets/img/logo/four.png";
+import slider_img_2_1 from "../../../../public/assets/img/logo/five.png";
+import slider_img_2_2 from "../../../../public/assets/img/logo/six.png";
+import slider_img_2_3 from "../../../../public/assets/img/logo/seven.png";
+import slider_img_2_4 from "../../../../public/assets/img/logo/eight.png";
+import slider_img_1_5 from "../../../../public/assets/img/logo/nine.png";
+import slider_img_1_6 from "../../../../public/assets/img/logo/ten.png";
+import slider_img_1_7 from "../../../../public/assets/img/logo/eleven.png";
+import slider_img_1_8 from "../../../../public/assets/img/logo/twelve.png";
+import slider_img_2_5 from "../../../../public/assets/img/logo/thirteen.png";
+import slider_img_2_6 from "../../../../public/assets/img/logo/fourteen.png";
+import slider_img_2_7 from "../../../../public/assets/img/logo/fifteen.png";
+import slider_img_2_8 from "../../../../public/assets/img/logo/sixteen.png";
+import slider_img_1_9 from "../../../../public/assets/img/logo/seventeen.png";
+import slider_img_1_10 from "../../../../public/assets/img/logo/eighteen.png";
+import slider_img_1_11 from "../../../../public/assets/img/logo/nineteen.png";
+import slider_img_1_12 from "../../../../public/assets/img/logo/twenty.png";
+import slider_img_2_9 from "../../../../public/assets/img/logo/twentyone.png";
+import slider_img_2_10 from "../../../../public/assets/img/logo/twentytwo.png";
+import slider_img_2_11 from "../../../../public/assets/img/logo/twentythree.png";
+import slider_img_2_12 from "../../../../public/assets/img/logo/twentyfour.png";
+import slider_img_1_13 from "../../../../public/assets/img/logo/twentyfive.png";
+import slider_img_1_14 from "../../../../public/assets/img/logo/twentysix.png";
+import slider_img_1_15 from "../../../../public/assets/img/logo/twentyseven.png";
+import slider_img_1_16 from "../../../../public/assets/img/logo/twentyeight.png";
+import slider_img_2_13 from "../../../../public/assets/img/logo/twentynine.png";
+import slider_img_2_14 from "../../../../public/assets/img/logo/thirty.png";
+import slider_img_2_15 from "../../../../public/assets/img/logo/thirtyone.png";
+import slider_img_2_16 from "../../../../public/assets/img/logo/thirtytwo.png";
+import slider_img_1_17 from "../../../../public/assets/img/logo/thirtythree.png";
+import slider_img_1_18 from "../../../../public/assets/img/logo/thirtyfive.png";
+import slider_img_1_19 from "../../../../public/assets/img/logo/thirtysix.png";
+import slider_img_1_20 from "../../../../public/assets/img/logo/thirtyseven.png";
+import slider_img_2_17 from "../../../../public/assets/img/logo/thirtyeight.png";
+import slider_img_2_18 from "../../../../public/assets/img/logo/thirtynine.png";
+// import slider_img_2_19 from "../../../../public/assets/img/logo/fourty.png";
+import slider_img_2_20 from "../../../../public/assets/img/logo/fourtyone.png";
+import slider_img_1_21 from "../../../../public/assets/img/logo/fourtytwo.png";
+import slider_img_1_22 from "../../../../public/assets/img/logo/fourtythree.png";
+// import slider_img_1_23 from "../../../../public/assets/img/logo/fourtyfour.png";
+import slider_img_1_25 from "../../../../public/assets/img/logo/fourtyfive.png";
+
 
 const integration_content ={
     sub_title: "our cllients",
@@ -28,12 +69,52 @@ const slider_one_data = [
     slider_img_1_2,
     slider_img_1_3,
     slider_img_1_4,
+    slider_img_1_5,
+    slider_img_1_6,
+    slider_img_1_7,
+    slider_img_1_8,
+    slider_img_1_9,
+    slider_img_1_10,
+    slider_img_1_11,
+    slider_img_1_12,
+    slider_img_1_13,
+    slider_img_1_14,
+    slider_img_1_15,
+    slider_img_1_16,
+    slider_img_1_17,
+    slider_img_1_18,
+    slider_img_1_19,
+    slider_img_1_20,
+    slider_img_1_21,
+    slider_img_1_22,
+    // slider_img_1_23,
+    // slider_img_1_24,
+    slider_img_1_25,
+
 ]
+
 const slider_two_data = [
     slider_img_2_1,
     slider_img_2_2,
     slider_img_2_3,
     slider_img_2_4,
+    slider_img_2_5,
+    slider_img_2_6,
+    slider_img_2_7,
+    slider_img_2_8,
+    slider_img_2_9,
+    slider_img_2_10,
+    slider_img_2_11,
+    slider_img_2_12,
+    slider_img_2_13,
+    slider_img_2_14,
+    slider_img_2_15,
+    slider_img_2_16,
+    slider_img_2_17,
+    slider_img_2_18,
+    // slider_img_2_19,
+    slider_img_2_20,
+
 ]
 
 
@@ -155,7 +236,7 @@ const IntegrationArea = ({style_integraton}) => {
                     {slider_one_data.map((item, i)  => 
                         <div key={i} className="tp-integration-slider-main slick-slide">
                         <div className="tp-integration-slider-item">
-                           <Image src={item} alt="theme-pure" />
+                                <Image src={item} alt="theme-pure"  />
                         </div>
                      </div>
                     )}                     

@@ -5,56 +5,110 @@ import menu_data from "./menu-data";
 
 const MobileMenus = () => {
   const [navTitle, setNavTitle] = useState("");
-  //openMobileMenu
+
+  // Toggle the mobile menu
   const openMobileMenu = (menu) => {
-    if (navTitle === menu) {
-      setNavTitle("");
-    } else {
-      setNavTitle(menu);
-    }
+    setNavTitle(navTitle === menu ? "" : menu);
   };
+
   return (
     <>
       <nav className="mean-nav">
         <ul>
-          {menu_data.map((menu, i) => (
-            <React.Fragment key={i}>
-              {/* {menu.has_dropdown && (
-                <li className="has-dropdown">
-                  <Link href={menu.link}>{menu.title}</Link>
+          {menu_data.map((menu) => (
+            <li
+              key={menu.id}
+              className={`menu-item ${menu.has_dropdown ? "has-dropdown" : ""}`}
+            >
+              <Link href={menu.link}>
+                {menu.title}
+              </Link>
+
+              {/* Dropdown */}
+              {menu.has_dropdown && menu.sub_menus && (
+                <>
                   <ul
-                    className="submenu"
-                    style={{
-                      display: navTitle === menu.title ? "block" : "none",
-                    }}
+                    className={`submenu ${
+                      navTitle === menu.title ? "submenu-open" : ""
+                    }`}
                   >
-                    {menu.sub_menus.map((sub, i) => (
-                      <li key={i}>
-                        <Link href={sub.link}>{sub.title}</Link>
+                    {menu.sub_menus.map((sub) => (
+                      <li key={sub.link} className="submenu-item">
+                        <Link href={sub.link}>
+                          {sub.title}
+                        </Link>
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <button
                     className={`mean-expand ${
                       navTitle === menu.title ? "mean-clicked" : ""
                     }`}
-                   
                     onClick={() => openMobileMenu(menu.title)}
-                    style={{ fontSize: "18px", cursor: "pointer" }}
+                    aria-expanded={navTitle === menu.title}
                   >
-                    <i className="fal fa-plus"></i>
-                  </a>
-                </li>
-              )} */}
-              {!menu.has_dropdown && (
-                <li>
-                  <Link href={menu.link}>{menu.title}</Link>
-                </li>
+                    <i
+                      className={`fal ${
+                        navTitle === menu.title ? "fa-minus" : "fa-plus"
+                      }`}
+                    ></i>
+                  </button>
+                </>
               )}
-            </React.Fragment>
+            </li>
           ))}
         </ul>
       </nav>
+
+      {/* CSS Styling */}
+      <style jsx>{`
+        .mean-nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .menu-item {
+          position: relative;
+        }
+        .menu-item > a {
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          color: #333;
+        }
+        .has-dropdown > .submenu {
+          display: none;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .has-dropdown > .submenu.submenu-open {
+          display: block;
+        }
+        .submenu-item > a {
+          text-decoration: none;
+          display: block;
+          padding: 8px 15px;
+          color: #666;
+        }
+        .submenu-item > a:hover {
+          background-color: #f4f4f4;
+        }
+        .mean-expand {
+          background: none;
+          border: none;
+          font-size: 18px;
+          cursor: pointer;
+          padding: 10px;
+          color: #333;
+        }
+        .mean-expand:focus {
+          outline: none;
+        }
+        .mean-expand i {
+          pointer-events: none;
+        }
+      `}</style>
     </>
   );
 };

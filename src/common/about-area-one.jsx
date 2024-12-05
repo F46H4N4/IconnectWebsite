@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-// images import
+// Images import
 import about_img_1 from "../../public/assets/img/about/about-bg-one.png";
 import about_img_3 from "../../public/assets/img/about/aboutoneblocks.png";
 
-// about data
+// About data
 const about_data = [
   {
     id: 1,
@@ -20,7 +20,7 @@ const about_data = [
   },
 ];
 
-// about content
+// About content
 const about_content = {
   title: "Our Premium Brand",
   sub_title: "Premium Toner Cartridges",
@@ -31,7 +31,6 @@ const about_content = {
       reliability.
     </>
   ),
-
   about_list: [
     <>Full Warranty Support.</>,
     <>Eco-Friendly Commitment.</>,
@@ -45,9 +44,10 @@ const { title, sub_title, des, about_list, btn_text } = about_content;
 const AboutArea = () => {
   return (
     <>
-      <div className="tp-about__area tp-about__pt-pb" style={{ paddingTop:'74px' }}>
+      <div className="tp-about__area tp-about__pt-pb" style={{ paddingTop: '74px' }}>
         <div className="container">
           <div className="row align-items-center">
+            {/* Images Section */}
             <div
               className="col-xl-6 col-lg-6 wow tpfadeLeft"
               data-wow-duration=".9s"
@@ -70,6 +70,8 @@ const AboutArea = () => {
                 ))}
               </div>
             </div>
+
+            {/* Content Section */}
             <div
               className="col-xl-6 col-lg-6 wow tpfadeRight"
               data-wow-duration=".9s"
@@ -77,7 +79,7 @@ const AboutArea = () => {
             >
               <div className="tp-about__right">
                 <div className="tp-about__section-box">
-                  <h4 className="tp-section-subtitle"  style={{ color:"#000000" }}>{title}</h4>
+                  <h4 className="tp-section-subtitle" style={{ color: "#000000" }}>{title}</h4>
                   <h3 className="tp-section-title mb-15">{sub_title}</h3>
                   <p>{des}</p>
                 </div>
@@ -109,9 +111,22 @@ const AboutArea = () => {
         .tp-about__img-wrapper {
           position: relative;
         }
+
         .tp-about__sub-img {
           width: 50%;
+          animation: float-animation 3s ease-in-out infinite;
         }
+
+        @keyframes float-animation {
+          0%,
+          100% {
+            transform: translate(-50%, -50%) translateY(0);
+          }
+          50% {
+            transform: translate(-50%, -50%) translateY(-10px);
+          }
+        }
+
         @media (max-width: 768px) {
           .tp-about__sub-img {
             width: 70%;

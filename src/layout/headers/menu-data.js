@@ -44,10 +44,12 @@ const menu_data = [
     title: "Products",
     link: "/project",
     active: "",
-    // sub_menus: [
-    //   { link: "/project", title: "Project" },
-    //   { link: "/project-details", title: "Project Details" }, 
-    // ],
+    sub_menus: [
+      { link: "/software", title: "Software" },
+      { link: "/electronics", title: "Electronics" }, 
+      { link: "/hardware", title: "Hardware" }, 
+
+    ],
   },
 
   {
