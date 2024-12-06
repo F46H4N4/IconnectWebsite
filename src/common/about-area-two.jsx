@@ -103,36 +103,113 @@ const AboutArea = () => {
         </div>
       </div>
       <style jsx>{`
+    .tp-about__img-wrapper {
+      position: relative;
+    }
+
+    .tp-about__sub-img {
+      width: 516px;
+      height: 712px;
+      animation: float-animation 3s ease-in-out infinite;
+    }
+
+    @keyframes float-animation {
+      0%,
+      100% {
+        transform: translate(-50%, -50%) translateY(0);
+      }
+      50% {
+        transform: translate(-50%, -50%) translateY(-10px);
+      }
+    }
+
+    .tp-about__right {
+      padding-left: 45px;
+    }
+
+    .tp-about__section-box {
+      margin-left: -20px;
+    }
+
+    /* Responsiveness for medium devices */
+    @media (max-width: 992px) {
+      .tp-about__sub-img {
+        width: 80%;
+        height: auto;
+        margin: auto;
+      }
+
+      .tp-about__right {
+        padding-left: 20px;
+      }
+
+      .tp-about__section-box {
+        margin-left: 0;
+      }
+
+      .tp-about__btn {
+        margin-top: 20px;
+      }
+    }
+
+    /* Responsiveness for small devices */
+    @media (max-width: 768px) {
       .tp-about__img-wrapper {
-          position: relative;
-        }
-        .tp-about__sub-img {
-          width: 50%;
-          animation: float-animation 3s ease-in-out infinite;
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
-        }
-        @keyframes float-animation {
-          0%,
-          100% {
-            transform: translate(-50%, -50%) translateY(0);
-          }
-          50% {
-            transform: translate(-50%, -50%) translateY(-10px);
-          }
-        }
+      .tp-about__sub-img {
+        width: 90%;
+        height: auto;
+      }
 
-        @media (max-width: 768px) {
-          .tp-about__sub-img {
-            width: 70%;
-          }
-        }
-        .tp-about__right {
-          padding-left: 45px; /* Add left padding to shift the content left */
-        }
-        .tp-about__right .tp-about__section-box {
-          margin-left: -20px; /* Negative margin to move the section left */
-        }
-      `}</style>
+      .tp-about__right {
+        padding: 0 15px;
+      }
+
+      .tp-about__section-box {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .tp-about__list ul {
+        text-align: center;
+        padding: 0;
+      }
+
+      .tp-about__btn {
+        text-align: center;
+        margin: auto;
+      }
+    }
+
+    /* Responsiveness for extra-small devices */
+    @media (max-width: 576px) {
+      .tp-about__img-wrapper {
+        text-align: center;
+      }
+
+      .tp-about__sub-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .tp-about__right {
+        padding: 0 10px;
+      }
+
+      .tp-about__section-box {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .tp-about__btn {
+        text-align: center;
+      }
+    }
+  `}</style>
+
     </>
   );
 };

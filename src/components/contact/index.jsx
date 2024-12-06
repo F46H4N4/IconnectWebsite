@@ -22,7 +22,7 @@ const Contact = () => {
             <ContactFormArea />
             {/* <BlogArea /> */}
             <OfficeLocation />
-            <CtaArea />
+            {/* <CtaArea /> */}
           </main>
           <Footer />
         </div>

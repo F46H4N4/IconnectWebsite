@@ -15,7 +15,7 @@ const about_data = [
   },
   {
     id: 2,
-    cls: "sub-img",  // Apply animation only to this image
+    cls: "sub-img", // Apply animation only to this image
     img: about_img_3,
   },
 ];
@@ -50,7 +50,7 @@ const AboutArea = () => {
           <div className="row align-items-center">
             {/* Images Section */}
             <div
-              className="col-xl-6 col-lg-6 wow tpfadeLeft"
+              className="col-xl-6 col-lg-6 col-md-12 wow tpfadeLeft"
               data-wow-duration=".9s"
               data-wow-delay=".2s"
             >
@@ -66,7 +66,14 @@ const AboutArea = () => {
                       transform: i === 1 ? "translate(-50%, -50%)" : "none",
                     }}
                   >
-                    <Image src={item.img} alt="theme-pure" />
+                    <Image
+                      src={item.img}
+                      alt="theme-pure"
+                      style={{
+                        maxWidth: i === 1 ? "100%" : "auto",
+                        maxHeight: i === 1 ? "100%" : "auto",
+                      }}
+                    />
                   </div>
                 ))}
               </div>
@@ -74,7 +81,7 @@ const AboutArea = () => {
 
             {/* Content Section */}
             <div
-              className="col-xl-6 col-lg-6 wow tpfadeRight"
+              className="col-xl-6 col-lg-6 col-md-12 wow tpfadeRight text-center text-md-start"
               data-wow-duration=".9s"
               data-wow-delay=".6s"
             >
@@ -109,32 +116,78 @@ const AboutArea = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        .tp-about__img-wrapper {
-          position: relative;
-        }
+   <style jsx>{`
+  /* Original dimensions for larger screens */
+  .tp-about__img-wrapper {
+    position: relative;
+    width: 576.7px;
+    height: 442.64px;
+  }
 
-        .tp-about__sub-img {
-          width: 50%;
-          animation: float-animation 3s ease-in-out infinite;
-        }
+  .tp-about__sub-img {
+    width: 468px;
+    height: 515.63px;
+    animation: float-animation 3s ease-in-out infinite;
+  }
 
-        @keyframes float-animation {
-          0%,
-          100% {
-            transform: translate(-50%, -50%) translateY(0);
-          }
-          50% {
-            transform: translate(-50%, -50%) translateY(-10px);
-          }
-        }
+  @keyframes float-animation {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-10px);
+    }
+  }
 
-        @media (max-width: 768px) {
-          .tp-about__sub-img {
-            width: 70%;
-          }
-        }
-      `}</style>
+  /* Adjustments for medium screens */
+  @media (max-width: 1200px) {
+    .tp-about__img-wrapper {
+      width: 480px;
+      height: 368px;
+    }
+
+    .tp-about__sub-img {
+      width: 390px;
+      height: 430px;
+    }
+  }
+
+  /* Adjustments for small screens */
+  @media (max-width: 768px) {
+    .tp-about__img-wrapper {
+      width: 100%;
+      height: auto;
+    }
+
+    .tp-about__sub-img {
+      width: 70%;
+      height: auto;
+      margin: auto;
+    }
+
+    .tp-about__section-box {
+      text-align: center;
+    }
+
+    .tp-about__list {
+      margin: 20px auto;
+    }
+
+    .tp-about__btn {
+      margin: 20px auto;
+    }
+  }
+
+  /* Further adjustments for very small screens */
+  @media (max-width: 576px) {
+    .tp-about__sub-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+`}</style>
+
     </>
   );
 };

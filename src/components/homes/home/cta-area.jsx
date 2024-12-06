@@ -90,7 +90,7 @@ const CtaArea = () => {
                     width={393}   // Fixed width
                     height={425}  // Fixed height
                     style={{
-                      borderRadius: "20px",
+                      borderRadius: "6px",
                       objectFit: "cover", // Ensure the image maintains its aspect ratio
                       width: "100%",       // Ensure full width of container
                       height: "auto",      // Maintain aspect ratio

@@ -102,7 +102,7 @@ const Footer = () => {
                     <form onSubmit={(e) => e.preventDefault()}>
                       <input type="text" placeholder="Business email address" />
                       <span>
-                        <EmailIcon />
+                        <img src="assets/img/contact/email.png"/>
                       </span>
                       <button>
                         <RightArrow />
@@ -123,7 +123,7 @@ const Footer = () => {
                     <div className="tp-footer__text" style={{ color: '#fff' }}>
                       <div className="d-flex align-items-center mb-2">
                         <span className="me-2">
-                          <PhoneIcon style={{ stroke: '#fff', strokeWidth: '2' }} />
+                        <img src="assets/img/contact/phone.png"/>
                         </span>
                         <Link href={`tel:${phone}`} style={{ color: '#fff' }}>
                           {phone}
@@ -131,9 +131,9 @@ const Footer = () => {
                       </div>
                       <div className="d-flex align-items-center">
                         <span className="me-2">
-                          <ContactIcon style={{ stroke: '#fff', strokeWidth: '2' }} />
+                        <img src="assets/img/contact/email.png"/>
                         </span>
-                        <Link href={`mailto:${contact_mail}`} style={{ color: '#fff' }}>
+                        <Link href="mailto:info@iconnect-kw.com" style={{ color: '#fff' }}>
                           {contact_mail}
                         </Link>
                       </div>
@@ -170,7 +170,7 @@ const Footer = () => {
                           <li key={index} className="location-item">
                             <div className="d-flex align-items-start">
                               <span className="icon-container me-3">
-                                <LocationIcon />
+                                {/* <LocationIcon /> */}
                               </span>
                               <p className="mb-0" style={{ color: 'white' }}>
                                 <strong>{loc.country}</strong>

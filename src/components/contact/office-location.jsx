@@ -38,7 +38,7 @@ const OfficeLocation = () => {
 
                                 {/* Address */}
                                 <div className="address">
-                                    <p style={{ color:'white', fontSize:'22px', lineHeight:'1.3'}}>
+                                    <p style={{ color:'white', lineHeight:'1.3'}}>
                                         Al Mubarakiya, Oman Street, <br />
                                         Behind Gulf Bank Head Office, <br />
                                         Kuwait City 15258
@@ -108,7 +108,7 @@ const OfficeLocation = () => {
 
                 .bottom-image {
                     position: absolute;
-                    bottom: 20px;
+                    bottom: -10px;
                     right: 20px;
                 }
 
@@ -130,8 +130,8 @@ const OfficeLocation = () => {
                     .bottom-image {
                         width: 150px; /* Resize image */
                         height: auto;
-                        bottom: 10px;
-                        right: 10px;
+                        bottom: -10px;
+                        right: -35px;
                     }
                 }
             `}</style>

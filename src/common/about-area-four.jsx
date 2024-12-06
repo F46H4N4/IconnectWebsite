@@ -164,13 +164,13 @@ const AboutArea = () => {
                     }
 
                     .overlay-image {
-                        width: 60%; /* Adjust for smaller screens */
+                        width: 60% !important; /* Adjust for smaller screens */
                     }
                 }
 
                 @media (max-width: 480px) {
                     .overlay-image {
-                        width: 70%; /* Further adjust for very small screens */
+                        width: 70% !important; /* Further adjust for very small screens */
                     }
 
                     .title {

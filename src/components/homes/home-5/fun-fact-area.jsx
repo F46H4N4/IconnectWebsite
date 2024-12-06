@@ -9,6 +9,7 @@ const FunFactArea = () => {
         style={{
           background: "white",
           paddingTop: "74px",
+          paddingBottom:"74px"
         }}
       >
         <div
