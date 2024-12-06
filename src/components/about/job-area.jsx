@@ -95,12 +95,16 @@ const JobArea = ({style_carrer}) => {
                            </div>
                         </div>
                         <div className=" col-lg-3 col-md-3">
-                           <div className="job-post-apply-btn text-start text-md-end">
-                              <Link className="tp-btn-inner tp-btn-hover alt-color-orange" 
-                              href="/career-details"><span>Apply</span> <b></b>
-                              </Link>
-                           </div>
+                        <div className="job-post-apply-btn text-start text-md-end">
+                           <a
+                              className="tp-btn-inner tp-btn-hover alt-color-orange"
+                              href={`mailto:farhana2224u@gmail.com?subject=Job Application - ${item.category}&body=Dear Arathi,%0D%0A%0D%0AI am interested in applying for the position of ${item.category}. Below are the details:%0D%0A%0D%0AJob Title: ${item.category}%0D%0AJob Location: ${item.job_location}%0D%0A%0D%0AThank you for considering my application.%0D%0A%0D%0ARegards,%0D%0AYour Name`}
+                           >
+                              <span>Apply</span>
+                              <b></b>
+                           </a>
                         </div>
+                     </div>
                      </div>
                   </div>                    
                     )

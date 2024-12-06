@@ -10,12 +10,12 @@ import about_img_3 from "../../public/assets/img/about/aboutoneblocks.png";
 const about_data = [
   {
     id: 1,
-    cls: "main-img",
+    cls: "bg-img",
     img: about_img_1,
   },
   {
     id: 2,
-    cls: "sub-img",
+    cls: "sub-img",  // Apply animation only to this image
     img: about_img_3,
   },
 ];
@@ -39,6 +39,7 @@ const about_content = {
   ],
   btn_text: "View Details",
 };
+
 const { title, sub_title, des, about_list, btn_text } = about_content;
 
 const AboutArea = () => {
@@ -96,7 +97,7 @@ const AboutArea = () => {
                 <div className="tp-about__btn">
                   <Link
                     className="tp-btn tp-btn-hover alt-color-black"
-                    href="/about"
+                    href="/assets/finalToner.pdf"
                   >
                     <span>{btn_text}</span>
                     <b></b>
@@ -107,6 +108,7 @@ const AboutArea = () => {
           </div>
         </div>
       </div>
+
       <style jsx>{`
         .tp-about__img-wrapper {
           position: relative;

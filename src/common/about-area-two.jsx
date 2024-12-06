@@ -10,7 +10,7 @@ import about_img_3 from "../../public/assets/img/about/abouttwoblocks.png";
 const about_data = [
   {
     id: 1,
-    cls: "main-img",
+    cls: "bg-img",
     img: about_img_1,
   },
   {
@@ -103,12 +103,24 @@ const AboutArea = () => {
         </div>
       </div>
       <style jsx>{`
-        .tp-about__img-wrapper {
+      .tp-about__img-wrapper {
           position: relative;
         }
         .tp-about__sub-img {
           width: 50%;
+          animation: float-animation 3s ease-in-out infinite;
+
         }
+        @keyframes float-animation {
+          0%,
+          100% {
+            transform: translate(-50%, -50%) translateY(0);
+          }
+          50% {
+            transform: translate(-50%, -50%) translateY(-10px);
+          }
+        }
+
         @media (max-width: 768px) {
           .tp-about__sub-img {
             width: 70%;

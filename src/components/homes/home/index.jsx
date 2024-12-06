@@ -9,6 +9,8 @@ import AboutAreaThree from "../../../common/about-area-three";
 import Feedbacks from "../../../common/testimonial-area";
 import Connect from "@/src/components/contact/cta-area";
 import ProductArea from "@/src/components/homes/home-3/blog-area";
+import VideoArea from "@/src/components/homes/home-5/video-component";
+import Section from "@/src/components/homes/home-5/video-home";
 
 import FeatureArea from "./feature-area";
 import PriceArea from "./price-area";
@@ -30,8 +32,8 @@ const HomeOne = () => {
   return (
     <>
       <HeaderThree />
-      <HeroArea  />
-      {/* <AboutArea /> */}
+      <HeroArea />
+      <VideoArea />
       <AboutAreaThree/>
       <ServicesArea />
       <CtaArea />

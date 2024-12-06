@@ -92,7 +92,7 @@ const TestimonialArea = () => {
                            className={`swiper-container testimonial-five-slider-active ${isDragged ? "dragged" : ""
                               }`}>
                            {testimonial_data.slice(12, 25).map((item, i) =>
-                              <SwiperSlide key={i} className="tp-testimonial-five-item">
+                              <SwiperSlide key={i} className="tp-testimonial-five-item" style={{height: '300px'  }}>
                                  <div className="tp-testimonial-five-wrapper d-flex justify-content-between align-items-center">
                                     <div className="tp-testimonial-five-top-info d-flex align-items-center">
                                        <div className="tp-testimonial-five-avata">

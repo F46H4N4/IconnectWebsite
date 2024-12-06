@@ -16,8 +16,8 @@ const inner_content = {
     {
       id: 1,
       icon: icon_1,
-      title: "contact@softuch.com",
-      link: "mailto:contact@softuch.com",
+      title: "hr@amiyon.com",
+      link: "mailto:hr@amiyon.com",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const inner_content = {
     {
       id: 3,
       icon: icon_3,
-      title: "35Park Avenue, Uk",
+      title: "Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258",
       link: "https://www.google.com.bd/maps/@23.7806365,90.4193257,12z",
     },
   ],

@@ -41,7 +41,7 @@ const ContactUsForm = () => {
           fullName: formData.fullName,
           email: formData.email,
           phone: formData.phone,
-          inquiry: formData.inquiry,
+          // inquiry: formData.inquiry,
           message: formData.message
         },
         '4oZhQBYXGSKWdRHWn'
@@ -116,8 +116,8 @@ const ContactUsForm = () => {
             <span className="floating-label">Phone Number</span>
           </div>
         </div>
-        <div className="col-12">
-          <div className="postbox__select mb-30">
+        {/* <div className="col-12"> */}
+          {/* <div className="postbox__select mb-30">
             <NiceSelect
               options={[
                 { value: "Your Inquiry about", text: "Your Inquiry about" },
@@ -130,8 +130,8 @@ const ContactUsForm = () => {
               defaultCurrent={0}
               onChange={selectHandler}
             />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <div className="col-xxl-12">
           <div className="postbox__comment-input mb-30">
             <textarea 

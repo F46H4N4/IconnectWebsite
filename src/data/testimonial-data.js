@@ -26,9 +26,9 @@ import author_img_11 from "../../public/assets/img/testimonial/testi-icon-5-4.pn
 import author_img_12 from "../../public/assets/img/testimonial/testi-icon-5-1.png"
 
 
-import brand_icon_1 from "../../public/assets/img/testimonial/testi-logo-5-2.png"
-import brand_icon_2 from "../../public/assets/img/testimonial/testi-logo-5-1.png"
-import brand_icon_3 from "../../public/assets/img/testimonial/testi-logo-5-2.png"
+import brand_icon_1 from "../../public/assets/img/logo/yalfish.png"
+import brand_icon_2 from "../../public/assets/img/logo/paynet_logo.png"
+import brand_icon_3 from "../../public/assets/img/logo/diet.png"
 import brand_icon_4 from "../../public/assets/img/testimonial/testi-logo-5-3.png"
 import brand_icon_5 from "../../public/assets/img/testimonial/testi-logo-5-3.png"
 import brand_icon_6 from "../../public/assets/img/testimonial/testi-logo-5-2.png"
@@ -47,7 +47,7 @@ const testimonial_data = [
         name: "Benjamin Evalent",
         title: "WP Developer", 
         count: 94, 
-        description: <>“Business growth is a point a business reaches where it expands and requires more avenues to generate a profit. This can happen when a company increases revenue.”</>,
+        description: <>🐟 "I was amazed by the quality and freshness of the fish I ordered online. It arrived perfectly packed and on time! Highly recommended!"</>,
         sub_des: <>Increase in offline purchases versus control group.</>
     },
     {
@@ -167,8 +167,7 @@ const testimonial_data = [
         brand_icon: brand_icon_1,
         name: "Joann J.",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🐟 "I was amazed by the quality and freshness of the fish I ordered online. It arrived perfectly packed and on time! Highly recommended!"</>,
 
     },
     {
@@ -177,8 +176,7 @@ const testimonial_data = [
         brand_icon: brand_icon_2,
         name: "Joann J.",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🧾 "Absolutely love how fast and seamless the transactions are on this app. It's reliable and user-friendly!"</>,
 
     },
     {
@@ -187,8 +185,7 @@ const testimonial_data = [
         brand_icon: brand_icon_3,
         name: "Steven G.",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🥗 "The meals are delicious, nutritious, and portion sizes are just right. It makes sticking to a diet so much easier!"</>,
 
     },
     {
@@ -197,8 +194,7 @@ const testimonial_data = [
         brand_icon: brand_icon_4,
         name: "Gary M. Adams",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🛒 "Shopping on this platform is a breeze—intuitive interface and a wide variety of products!</>,
 
     },
     {
@@ -207,8 +203,7 @@ const testimonial_data = [
         brand_icon: brand_icon_5,
         name: "Edward G. Hall",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>✅ "The platform’s user interface is intuitive and streamlined, making auditing a hassle-free experience."</>,
 
     },
     {
@@ -217,8 +212,7 @@ const testimonial_data = [
         brand_icon: brand_icon_6,
         name: "Erma P. Brown",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <> 🗂️ "The gym management system makes scheduling classes and managing memberships seamless and efficient."</>,
 
     }, 
     {
@@ -227,58 +221,52 @@ const testimonial_data = [
         brand_icon: brand_icon_7,
         name: "Joann J.",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🚚 "Fast and reliable delivery service. My orders always arrive on time!"</>,
 
     },
     {
         id: 20, 
         author_img: author_img_8,
-        brand_icon: brand_icon_8,
+        brand_icon: brand_icon_3,
         name: "Joann J.",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>“🔢 "Good portion sizes, but I wish there were more calorie-conscious options. ”</>,
 
     },
     {
         id: 21, 
         author_img: author_img_9,
-        brand_icon: brand_icon_9,
+        brand_icon: brand_icon_2,
         name: "Steven G.",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🔒 "Great security features! I feel confident knowing that my payments are safe.</>,
 
     },
     {
         id: 22, 
         author_img: author_img_10,
-        brand_icon: brand_icon_10,
+        brand_icon: brand_icon_1,
         name: "Gary M. Adams",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🌊 "Buying fish online turned out to be a fantastic experience. The selection was excellent, and the fish were fresh and vibrant!</>,
 
     },
     {
         id: 23, 
         author_img: author_img_11,
-        brand_icon: brand_icon_11,
+        brand_icon: brand_icon_2,
         name: "Edward G. Hall",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>⏱️ "Instant transactions every time. Truly a time-saver!</>,
 
     },
     {
         id: 24, 
         author_img: author_img_12,
-        brand_icon: brand_icon_12,
+        brand_icon: brand_icon_3,
         name: "Erma P. Brown",
         title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        description: <>🍴 "The variety in the menu is fantastic. Never get bored of the choices!</>,
 
     },
 ]
