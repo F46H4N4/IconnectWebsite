@@ -81,7 +81,7 @@ const MobileMenus = () => {
           text-decoration: none;
           display: block;
           padding: 10px;
-          color: #333;
+          color: white;
         }
         .menu-item > a:hover,
         .mean-expand:hover {
@@ -107,7 +107,7 @@ const MobileMenus = () => {
           border: none;
           font-size: 18px;
           cursor: pointer;
-          color: #333;
+          color: white;
         }
         .mean-expand:focus {
           outline: none;
