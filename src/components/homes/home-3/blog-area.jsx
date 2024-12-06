@@ -6,7 +6,7 @@ import React from 'react';
 const BlogArea = () => {
     return (
         <>
-            <div className="tp-blog-area pb-80" style={{ paddingTop: '84px' }}>
+            <div className="tp-blog-area" style={{ paddingTop: '74px' }}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xl-5">

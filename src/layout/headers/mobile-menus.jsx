@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-// internal
 import menu_data from "./menu-data";
 
 const MobileMenus = () => {
@@ -20,26 +19,9 @@ const MobileMenus = () => {
               key={menu.id}
               className={`menu-item ${menu.has_dropdown ? "has-dropdown" : ""}`}
             >
-              <Link href={menu.link}>
-                {menu.title}
-              </Link>
-
-              {/* Dropdown */}
-              {menu.has_dropdown && menu.sub_menus && (
+              {/* Check if the menu item has a dropdown */}
+              {menu.has_dropdown ? (
                 <>
-                  <ul
-                    className={`submenu ${
-                      navTitle === menu.title ? "submenu-open" : ""
-                    }`}
-                  >
-                    {menu.sub_menus.map((sub) => (
-                      <li key={sub.link} className="submenu-item">
-                        <Link href={sub.link}>
-                          {sub.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
                   <button
                     className={`mean-expand ${
                       navTitle === menu.title ? "mean-clicked" : ""
@@ -47,13 +29,36 @@ const MobileMenus = () => {
                     onClick={() => openMobileMenu(menu.title)}
                     aria-expanded={navTitle === menu.title}
                   >
+                    {menu.title}
                     <i
                       className={`fal ${
                         navTitle === menu.title ? "fa-minus" : "fa-plus"
                       }`}
                     ></i>
                   </button>
+
+                  {/* Dropdown */}
+                  {menu.has_dropdown && menu.sub_menus && (
+                    <ul
+                      className={`submenu ${
+                        navTitle === menu.title ? "submenu-open" : ""
+                      }`}
+                    >
+                      {menu.sub_menus.map((sub) => (
+                        <li key={sub.link} className="submenu-item">
+                          <Link href={sub.link}>
+                            {sub.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </>
+              ) : (
+                // For menu items without dropdown, make them clickable
+                <Link href={menu.link} className="menu-title">
+                  {menu.title}
+                </Link>
               )}
             </li>
           ))}
@@ -70,36 +75,38 @@ const MobileMenus = () => {
         .menu-item {
           position: relative;
         }
-        .menu-item > a {
+        .menu-item > a,
+        .menu-title,
+        .mean-expand {
           text-decoration: none;
           display: block;
           padding: 10px;
           color: #333;
         }
-        .has-dropdown > .submenu {
+        .menu-item > a:hover,
+        .mean-expand:hover {
+          background-color: #f4f4f4;
+        }
+        .submenu {
           display: none;
           list-style: none;
           padding: 0;
-          margin: 0;
         }
-        .has-dropdown > .submenu.submenu-open {
+        .submenu.submenu-open {
           display: block;
         }
         .submenu-item > a {
-          text-decoration: none;
-          display: block;
           padding: 8px 15px;
           color: #666;
         }
         .submenu-item > a:hover {
-          background-color: #f4f4f4;
+          background-color: #eaeaea;
         }
         .mean-expand {
           background: none;
           border: none;
           font-size: 18px;
           cursor: pointer;
-          padding: 10px;
           color: #333;
         }
         .mean-expand:focus {

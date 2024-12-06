@@ -26,7 +26,7 @@ const BreadcrumbTen = () => {
          }}
       >
         <div className="breadcrumb__content z-index-3 text-center">
-                           <h3 ref={animeRef} className="breadcrumb__title tp-char-animation text-black anime_text" style={{ color:'white !important',fontSize:'70px !important' }}>Electronics</h3>
+                           <h3 ref={animeRef} className="breadcrumb__title tp-char-animation text-black anime_text" style={{ color:'white !important',fontSize:'70px !important' }}>Hardware</h3>
                            <div className="breadcrumb__text wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
                               {/* <p>We have an experienced team of production and inspection personnel <br /> to ensure quality.</p> */}
                            </div>

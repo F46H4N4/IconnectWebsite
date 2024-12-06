@@ -48,8 +48,8 @@ const BlogArea = () => {
 
                                     {/* Learn More Link */}
                                     <div className="tp-blog-author-info-box d-flex align-items-center">
-                                        <Link href={`/${item.slug}`} className="learn-more-link" style={{ color:"#130DE5" }}>
-                                            Learn More <i className="fas fa-arrow-right" style={{ color:"#130DE5", paddingLeft:'2px' }}></i>
+                                        <Link href='#' className="learn-more-link" style={{fontSize:'17.5px',color:"#393939" }}>
+                                           {item.desc}
                                         </Link>
                                     </div>
                                 </div>

@@ -108,7 +108,7 @@ const BreadcrumbEight = () => {
                      </div>
                   </div>
                </div>
-               <Link href="https://gopaynet.com/"
+               <Link href="https://gym.amiyon.com/login"
                    style={{
                      color: '#ffffff',
                      fontWeight: 'bold',

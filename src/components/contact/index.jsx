@@ -8,6 +8,7 @@ import CtaArea from "./cta-area";
 import HeroBanner from "../../common/hero-banner";
 import OfficeLocation from "./office-location";
 import Footer from "@/src/layout/footers/footer";
+import BlogArea from "@/src/components/blog/blog-grid";
 
 
 const Contact = () => {
@@ -19,6 +20,7 @@ const Contact = () => {
           <main>
             <Breadcrumb />
             <ContactFormArea />
+            {/* <BlogArea /> */}
             <OfficeLocation />
             <CtaArea />
           </main>

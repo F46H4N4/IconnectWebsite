@@ -29,7 +29,7 @@ const { title, sub_title, des } = about_content;
 
 const AboutArea = () => {
     return (
-        <div className="tp-about__area tp-about__pt-pb">
+        <div className="tp-about__area tp-about__pt-pb" style={{ paddingTop:'74px' }}>
             <div className="container">
                 <div className="row align-items-center about-row">
                     <div

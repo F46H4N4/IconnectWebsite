@@ -27,7 +27,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="portfolio-area">
+      <div className="portfolio-area" style={{ paddingTop:'74px' }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-12">

@@ -22,7 +22,9 @@ const VideoPlayer = () => {
       });
 
       const handleVideoEnd = () => {
-        videoRef.current.play().catch(e => console.error(e));
+        if (videoRef.current) {
+          videoRef.current.play().catch(e => console.error(e));
+        }
       };
 
       videoRef.current.addEventListener('ended', handleVideoEnd);
@@ -61,8 +63,11 @@ const VideoPlayer = () => {
         );
       }
 
+      // Cleanup
       return () => {
-        videoRef.current.removeEventListener('ended', handleVideoEnd);
+        if (videoRef.current) {
+          videoRef.current.removeEventListener('ended', handleVideoEnd);
+        }
       };
     }
   }, []);
@@ -88,9 +93,15 @@ const VideoPlayer = () => {
       <div ref={contentRef} className="overlay-content">
         <div className="content-wrapper">
           <h2 ref={headingRef}>Who We Are</h2>
-          {["iConnect is a leading technology solutions provider in Kuwait, delivering cutting-edge IT services, hardware solutions, and digital products tailored for your business success.",
-            "With <strong>10+ years of experience</strong>, <strong>50+ projects completed</strong>, and <strong>99% customer satisfaction</strong>, we drive growth with innovation and commitment."].map((text, index) => (
-            <p ref={el => paragraphRefs.current[index] = el} key={index} dangerouslySetInnerHTML={{ __html: text }} />
+          {[
+            "iConnect is a leading technology solutions provider in Kuwait, delivering cutting-edge IT services, hardware solutions, and digital products tailored for your business success.",
+            "With <strong>10+ years of experience</strong>, <strong>50+ projects completed</strong>, and <strong>99% customer satisfaction</strong>, we drive growth with innovation and commitment."
+          ].map((text, index) => (
+            <p
+              ref={el => paragraphRefs.current[index] = el}
+              key={index}
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
           ))}
         </div>
       </div>

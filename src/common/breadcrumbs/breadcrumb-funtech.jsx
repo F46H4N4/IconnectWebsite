@@ -108,7 +108,7 @@ const BreadcrumbEight = () => {
                      </div>
                   </div>
                </div>
-               <Link href="https://funtech.com.kw/"
+               <Link href="https://shopaclick.com/"
                  style={{
                   color: '#ffffff',
                   fontWeight: 'bold',

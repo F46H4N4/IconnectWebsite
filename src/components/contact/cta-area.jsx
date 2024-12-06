@@ -14,7 +14,7 @@ const CtaArea = () => {
         <>
             <div>
                 <div className="tp-cta"></div>
-                <div className="container pt-50">
+                <div className="container" style={{ paddingTop:'74px' }}>
                     <div className="row">
                         <div className="col-12">
                             <div

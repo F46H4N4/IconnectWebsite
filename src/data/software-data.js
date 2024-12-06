@@ -17,8 +17,8 @@ const blog_data = [
         // category: "Crm Software",
         // color: "1",
         // date: "28 April, 2023",
-        title: <>Electronics</>,
-        slug:'electronics'
+        title: <>Product Name</>,
+        desc:'Lorem ipsum dolor sit amet consectetur. Phasellus semper vitae lectus magna eget tempus nunc.'
         // author_img: author_img_1,
         // author_name: "Hilary Ouse",
         // job_title: "Founder & CEO Dulalix"
@@ -29,8 +29,8 @@ const blog_data = [
         // category: "Sales Tools",
         // color: "2",
         // date: "28 April, 2023",
-        title: <>Software</>,
-        slug:'software'
+        title: <>Product Name</>,
+        desc:'Lorem ipsum dolor sit amet consectetur. Phasellus semper vitae lectus magna eget tempus nunc.'
         // author_img: author_img_2,
         // author_name: "Rudra Ghosh",
         // job_title: "Founder & CEO Dulalix"
@@ -41,8 +41,8 @@ const blog_data = [
         // category: "Sales Management",
         // color: "3",
         // date: "28 April, 2023",
-        title: <>Hardware</>,
-        slug:'hardware'
+         title: <>Product Name</>,
+        desc:'Lorem ipsum dolor sit amet consectetur. Phasellus semper vitae lectus magna eget tempus nunc.'
         // author_img: author_img_3,
         // author_name: "Penny Tool",
         // job_title: "Founder & CEO Dulalix"
@@ -53,8 +53,8 @@ const blog_data = [
         // category: "Crm Software",
         // color: "1",
         // date: "28 April, 2023",
-        title: <>Electronics</>,
-        slug:'electronics'
+         title: <>Product Name</>,
+        desc:'Lorem ipsum dolor sit amet consectetur. Phasellus semper vitae lectus magna eget tempus nunc.'
         // author_img: author_img_1,
         // author_name: "Hilary Ouse",
         // job_title: "Founder & CEO Dulalix"
@@ -65,8 +65,8 @@ const blog_data = [
         // category: "Sales Tools",
         // color: "2",
         // date: "28 April, 2023",
-        title: <>Software</>,
-        slug:'software'
+         title: <>Product Name</>,
+        desc:'Lorem ipsum dolor sit amet consectetur. Phasellus semper vitae lectus magna eget tempus nunc.'
         // author_img: author_img_2,
         // author_name: "Rudra Ghosh",
         // job_title: "Founder & CEO Dulalix"
@@ -77,8 +77,8 @@ const blog_data = [
         // category: "Sales Management",
         // color: "3",
         // date: "28 April, 2023",
-        title: <>Hardware</>,
-        slug:'hardware'
+        title: <>Product Name</>,
+        desc:'Lorem ipsum dolor sit amet consectetur. Phasellus semper vitae lectus magna eget tempus nunc.'
         // author_img: author_img_3,
         // author_name: "Penny Tool",
         // job_title: "Founder & CEO Dulalix"

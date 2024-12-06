@@ -57,10 +57,10 @@ const TestimonialArea = () => {
 
    return (
       <>
-         <div className="tp-testimonial-area pt-130 pb-130 fix"
-            style={{ backgroundColor: "#FFFAF5" }}
+         <div className="tp-testimonial-area fix"
+            style={{ backgroundColor: "#FFFAF5"}}
          >
-            <div className="container">
+            <div className="container" style={{ paddingBottom:'74px' }}>
                <div className="row align-items-end tp-testimonial-five-section-space">
                   <div className="col-md-8">
                      <div className="tp-testimonial-five-section-box">

@@ -33,8 +33,8 @@ const footer_content = {
       delay: '.7s',
       links: [
         { name: 'Web Development', link: '/web-development-service-details' },
-        { name: 'Web Hosting', link: '/web-hosting-service-details' },
-        { name: 'Outsourcing Service', link: '/outsource-service-details' },
+        { name: 'Payment Solution', link: '/paymentsolution-service-details' },
+        { name: 'Security Solution', link: '/securitysolution-service-details' },
         { name: 'App Development', link: '/app_development-service-details' },
         { name: 'Business Solution', link: '/business-service-details' },
         { name: 'E-commerce', link: '/e-commerce-service-details' },
@@ -85,7 +85,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="pt-50 fix">
+    <footer className="fix" style={{ paddingTop:'74px' }}>
       <div className="tp-footer__pl-pr p-relative">
         <div className="footer-black-bg tp-gsap-bg"></div>
         <div className="tp-footer__area pt-50">

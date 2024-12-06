@@ -41,7 +41,7 @@ const { title, sub_title, des, about_list, btn_text } = about_content;
 const AboutArea = () => {
   return (
     <>
-      <div className="tp-about__area tp-about__pt-pb pt-100 pb-160">
+      <div className="tp-about__area tp-about__pt-pb" style={{ paddingTop:'74px',paddingBottom:'74px' }}>
         <div className="container">
           <div className="row align-items-center">
             {/* Text content on the left */}
@@ -127,7 +127,7 @@ const AboutArea = () => {
           }
         }
         .tp-about__right {
-          padding-left: 20px; /* Add left padding to shift the content left */
+          padding-left: 45px; /* Add left padding to shift the content left */
         }
         .tp-about__right .tp-about__section-box {
           margin-left: -20px; /* Negative margin to move the section left */
