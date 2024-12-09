@@ -6,7 +6,7 @@ import { useIsomorphicLayoutEffect } from '@/src/hooks/useIsomorphicEffect';
 
 import left_shape from "../../../../public/assets/img/hero/hero-left-shape-3-1.png";
 import gradient_bg from "../../../../public/assets/img/hero/hero-gradient-3.jpg";
-import img_1 from "../../../../public/assets/img/hero/iconnect_home.png";
+import img_1 from "../../../../public/assets/img/hero/tabs.png";
 import img_2 from "../../../../public/assets/swipe.gif";
 
 const hero_content = {
@@ -129,7 +129,7 @@ const HeroArea = () => {
         }
         @media (max-width: 768px) {
           .tp-hero-title-3 {
-            font-size: 24px;
+            font-size: 30px;
           }
           .tp-char-animation-2 {
             font-size: 14px;

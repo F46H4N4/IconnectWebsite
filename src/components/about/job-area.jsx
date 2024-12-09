@@ -12,34 +12,34 @@ const job_data = {
     job_info: [
         {
             id:1, 
-            category: "Product Designer",
+            category: "Driver",
             job_time: "3 Years of Experience",
-            job_location: "Koratty Infopark, Kerala",
+            job_location: "Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258.",
         },
         {
             id:2, 
-            category: "UI/UX Designer",
+            category: "Sales Executive",
             job_time: "2 Years of Experience",
-            job_location: "Koratty Infopark, Kerala",
+            job_location: "Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258.",
         },
-        {
-            id:3, 
-            category: "Graphic Designer",
-            job_time: "1 Years of Experience",
-            job_location: "Koratty Infopark, Kerala",
-        },
-        {
-            id:4, 
-            category: "Marketing Specialist",
-            job_time: "2 Years of Experience",
-            job_location: "Koratty Infopark, Kerala",
-        },
-        {
-            id:5, 
-            category: "Php Laravel",
-            job_time: "4 Years of Experience",
-            job_location: "Koratty Infopark, Kerala",
-        },
+      //   {
+      //       id:3, 
+      //       category: "Graphic Designer",
+      //       job_time: "1 Years of Experience",
+      //       job_location: "Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258.a",
+      //   },
+      //   {
+      //       id:4, 
+      //       category: "Marketing Specialist",
+      //       job_time: "2 Years of Experience",
+      //       job_location: "Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258.",
+      //   },
+      //   {
+      //       id:5, 
+      //       category: "Php Laravel",
+      //       job_time: "4 Years of Experience",
+      //       job_location: "Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258.,
+      //   },
 
 
     ]

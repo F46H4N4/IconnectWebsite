@@ -23,7 +23,7 @@ const footer_content = {
       address: 'Al Mubarakiya, Oman Street, Behind Gulf Bank Head Office, Kuwait City 15258.',
     },
   ],
-  copy_right: <>Full Copyright & Design By <Link href="#">@Theme pure</Link> – {new Date().getFullYear()}</>,
+  copy_right: <>Full Copyright & Design By <Link href="#">@iconnect</Link> – {new Date().getFullYear()}</>,
   footer_links: [
     {
       id: 1,

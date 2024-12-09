@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsForm = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const ContactUsForm = () => {
     inquiry: "Your Inquiry about",
     message: ""
   });
+  const [captchaToken, setCaptchaToken] = useState(null); // Captcha token state
   const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -21,34 +23,34 @@ const ContactUsForm = () => {
     }));
   };
 
-  const selectHandler = (selectedValue) => {
-    setFormData(prevState => ({
-      ...prevState,
-      inquiry: selectedValue
-    }));
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token); // Save captcha token
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setErrorMessage('');
-    
-        try {
+
+    if (!captchaToken) {
+      setErrorMessage('Please complete the CAPTCHA.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
       await emailjs.send(
         'service_vqamdie',
-        'template_3744asb', 
+        'template_3744asb',
         {
           fullName: formData.fullName,
           email: formData.email,
           phone: formData.phone,
-          // inquiry: formData.inquiry,
           message: formData.message
         },
         '4oZhQBYXGSKWdRHWn'
       );
-      
-      
-      // Success handling
+
       setErrorMessage('Message sent successfully!');
       setFormData({
         fullName: "",
@@ -57,6 +59,7 @@ const ContactUsForm = () => {
         inquiry: "Your Inquiry about",
         message: ""
       });
+      setCaptchaToken(null); // Reset captcha
     } catch (error) {
       console.error('Email send error:', error);
       setErrorMessage('Failed to send message. Please try again.');
@@ -116,22 +119,6 @@ const ContactUsForm = () => {
             <span className="floating-label">Phone Number</span>
           </div>
         </div>
-        {/* <div className="col-12"> */}
-          {/* <div className="postbox__select mb-30">
-            <NiceSelect
-              options={[
-                { value: "Your Inquiry about", text: "Your Inquiry about" },
-                { value: "01 Year", text: "01 Year" },
-                { value: "02 Year", text: "02 Year" },
-                { value: "03 Year", text: "03 Year" },
-                { value: "04 Year", text: "04 Year" },
-                { value: "05 Year", text: "05 Year" },
-              ]}
-              defaultCurrent={0}
-              onChange={selectHandler}
-            />
-          </div> */}
-        {/* </div> */}
         <div className="col-xxl-12">
           <div className="postbox__comment-input mb-30">
             <textarea 
@@ -143,6 +130,12 @@ const ContactUsForm = () => {
             ></textarea>
             <span className="floating-label-2">Message...</span>
           </div>
+        </div>
+        <div className="col-xxl-12 mb-30">
+          <ReCAPTCHA
+            sitekey="6Lfnj5YqAAAAAEWIM9qoo_SmJG_p0l76yJTtET06" // Replace with your reCAPTCHA site key
+            onChange={handleCaptchaChange}
+          />
         </div>
         <div className="col-xxl-12">
           <div className="postbox__btn-box">

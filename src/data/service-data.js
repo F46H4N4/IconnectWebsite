@@ -8,10 +8,10 @@ import ServiceIconSeven from "../svg/service/service-icon-7"
 
 // images import  
 import img_1 from "../../public/assets/img/service/vector.png";
-import img_2 from "../../public/assets/img/service/Vectorone.png";
+import img_2 from "../../public/assets/img/service/uiux.png";
 import img_3 from "../../public/assets/img/service/Vectorthree.png";
 import img_4 from "../../public/assets/img/service/Vectorfour.png";
-import img_5 from "../../public/assets/img/service/Vectorfive.png";
+import img_5 from "../../public/assets/img/service/appicon.png";
 // for home 04
 import icon_1 from "../../public/assets/img/service/sv-icon-4-1.png"
 import icon_2 from "../../public/assets/img/service/sv-icon-4-2.png"
@@ -192,6 +192,63 @@ const  service_data = [
     },
     {
         id: 16,
+        icon: img_1,
+        // img: <ServiceIconOne />,
+        slug: 'paymentsolution',
+        title: "PAYMENT SOLUTION",
+        description: <>Secure, flexible payment systems.</>,
+        delay: ".9s",
+    },
+    {
+        id: 17,
+        icon: img_2,
+        // img: <ServiceIconTwo />,
+        slug: 'ui',
+        title: "UI/UX Design",
+        description: <>Designing seamless experiences.</>,
+        delay: ".9s",
+    },
+    {
+        id: 18,
+        icon: img_3,
+        // img: <ServiceIconThree />,
+        slug:'e-commerce',
+        title: "E-COMMERCE",
+        description: <>Sell smarter with tailored solutions.</>,
+        delay: ".9s",
+    },
+    {
+        id: 19,
+        icon: img_4,
+        // img: <ServiceIconFoure />,
+        slug:'web-development',
+        title: "WEB DEVELOPMENT",
+        description: <>Modern websites for your growth.</>,
+        delay: ".9s",
+    },
+    {
+        id: 20,
+        icon: img_5,
+        // img: <ServiceIconFive />,
+        slug: 'app_development',
+        title: "APP DEVELOPMENT",
+        description: <>Custom mobile apps, built smartly.</>,
+        delay: ".9s",
+    },
+    {
+        id: 21,
+        icon: img_9,
+        img: img_9,
+        title: <>BUSINESS SOLUTION</>,
+        slug: 'buisness',
+        sub_title: "Cloud Backup",
+        cls: "4",
+        description: <>Streamline operations, boost success.</>,
+        delay: ".9s",
+    },
+    
+    {
+        id: 22,
         icon: img_8,
         img: img_8,
         slug:'securitysolution',
@@ -202,65 +259,26 @@ const  service_data = [
         delay: ".9s",
     },
     {
-        id: 17,
-        icon: img_9,
-        img: img_9,
-        title: <>BUSINESS SOLUTION</>,
-        slug: 'buisness',
+        id: 23,
+        icon: img_8,
+        img: img_8,
+        slug:'Billing System',
+        title: <>BILLING SYSTEM</>,
         sub_title: "Cloud Backup",
         cls: "4",
-        description: <>Streamline operations, boost success.</>,
+        description: <>Designed to analyze and drive company growth.</>,
         delay: ".9s",
     },
+   
+   
 
     // service page
-    {
-        id: 18,
-        icon: img_1,
-        // img: <ServiceIconOne />,
-        slug: 'paymentsolution',
-        title: "PAYMENT SOLUTION",
-        description: <>Secure, flexible payment systems.</>,
-        delay: ".9s",
-    },
-    {
-        id: 19,
-        icon: img_2,
-        // img: <ServiceIconTwo />,
-        slug: 'erp',
-        title: "ERP APPLICATIONS",
-        description: <>Simplify management, enhance efficiency.</>,
-        delay: ".9s",
-    },
-    {
-        id: 20,
-        icon: img_3,
-        // img: <ServiceIconThree />,
-        slug:'e-commerce',
-        title: "E-COMMERCE",
-        description: <>Sell smarter with tailored solutions.</>,
-        delay: ".9s",
-    },
-    {
-        id: 21,
-        icon: img_4,
-        // img: <ServiceIconFoure />,
-        slug:'web-development',
-        title: "WEB DEVELOPMENT",
-        description: <>Modern websites for your growth.</>,
-        delay: ".9s",
-    },
+ 
+  
+   
+ 
     
-    {
-        id: 22,
-        icon: img_5,
-        // img: <ServiceIconFive />,
-        slug: 'app_development',
-        title: "APP DEVELOPMENT",
-        description: <>Custom mobile apps, built smartly.</>,
-        delay: ".9s",
-    },
-    
+  
     {
         id: 23,
         icon: img_6,

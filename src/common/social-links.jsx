@@ -13,7 +13,7 @@ const social_links = [
   //   icon: "fab fa-twitter", 
   // },
   {
-      link: "http://instagram.com",
+      link: "https://www.instagram.com/iconnect_kw/",
       target: "_blank",
       icon: "fab fa-instagram",
       label: "Instagram"

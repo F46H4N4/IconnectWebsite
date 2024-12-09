@@ -14,7 +14,7 @@ const service_details_content = {
         { id: 4, category: "App Development", cls: "", link:"/app_development-service-details" },
         { id: 5, category: "Buisness Solution", cls: "", link:"/buisness-service-details" },
         { id: 6, category: "E-Commerce", cls: "active", link: "/e-commerce-service-details" },
-        { id: 7, category: "ERP Applications", cls: "", link:"/erp-service-details" },
+        { id: 7, category: "UI/UX Design", cls: "", link: "/ui-service-details" },
 
     ],
     videos: [
