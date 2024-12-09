@@ -4,9 +4,8 @@ import Image from 'next/image';
 import ServiceVideo from "@/src/components/homes/home-5/webiste-service-video";
 import service_img from "../../../public/assets/img/service/appblock.png"; 
 
-// Mock Data for ERP Applications
 // Mock Data for Payment Solution
-const payment_solution_details = {
+const service_details_content = {
     category_title: "Payment Solution Services",
     categories: [
         { id: 1, category: "Web Development", cls: "", link: "/web-development-service-details" },
@@ -34,23 +33,14 @@ const payment_solution_details = {
     challenge_title: "Challenges in Payment Integration",
     challenge_des: (
         <>
-            Payment integration can be complex, involving challenges like multi-currency support, regulatory compliance, and ensuring a seamless user experience. We simplify these processes with expert solutions tailored to your business needs.
+            Payment integration can be complex, involving challenges like multi-currency support, regulatory compliance, and ensuring a seamless user experience.
+            We simplify these processes with expert solutions tailored to your business needs.
         </>
     ),
 };
 
 const ServiceDetailsArea = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Payment Solution");
-
-    // Dynamically change content based on selected category
-    const service_details_content = 
-        selectedCategory === "ERP Applications" ? erp_app_details :
-        selectedCategory === "Payment Solution" ? payment_solution_details : 
-        {
-            // Default content (for other categories)
-            category_title: "Service Category",
-            // Add your default categories and content here
-        };
+    const [selectedCategory, setSelectedCategory] = useState('Payment Solution');
 
     const {
         category_title,
@@ -60,7 +50,7 @@ const ServiceDetailsArea = () => {
         overview_des,
         overview_list,
         challenge_title,
-        challenge_des,
+        challenge_des
     } = service_details_content;
 
     return (
@@ -70,6 +60,7 @@ const ServiceDetailsArea = () => {
                     {/* Sidebar */}
                     <div className="col-xl-4 col-lg-4">
                         <div className="sv-details-widget">
+                            {/* Service Categories */}
                             <div className="sv-details-category mb-30">
                                 <div className="sv-details-category-title">
                                     <h4 className="sv-details-title-sm">{category_title}</h4>
@@ -101,38 +92,55 @@ const ServiceDetailsArea = () => {
                                     </div>
                                 ))}
                             </div>
+
+                            {/* Social Sharing */}
+                            <div className="sv-details-social-box mb-30">
+                                <h4 className="sv-details-title-sm">Share it.</h4>
+                                <div className="sv-details-social-link">
+                                    <Link href="#"><i className="fab fa-facebook-f"></i></Link>
+                                    <Link href="#"><i className="fab fa-twitter"></i></Link>
+                                    <Link href="#"><i className="fab fa-instagram"></i></Link>
+                                    <Link href="#"><i className="fab fa-youtube"></i></Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     {/* Main Content */}
                     <div className="col-xl-8 col-lg-8">
                         <div className="sv-details-wrapper">
+                            {/* Service Image */}
                             <div className="sv-details-thumb mb-45">
                                 <Image className="w-100" src={service_img} alt="Service Overview" />
                             </div>
 
+                            {/* Service Overview */}
                             <div className="sv-details-title-box mb-55">
                                 <h4 className="sv-details-title">{overview_title}</h4>
                                 <p>{overview_des}</p>
                             </div>
 
+                            {/* Going Beyond */}
                             <div className="sv-details-text mb-35">
                                 <h4 className="sv-details-text-title pb-10">Our Approach</h4>
                                 <ul>
                                     {overview_list.map((item, index) => (
                                         <li key={index}>
-                                            <i className="fal fa-check"></i> <p>{item}</p>
+                                            <i className="fal fa-check"></i>
+                                            <p>{item}</p>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
 
+                            {/* The Challenge */}
                             <div className="sv-details-text-2">
                                 <h4 className="sv-details-text-title">{challenge_title}</h4>
                                 <p>{challenge_des}</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

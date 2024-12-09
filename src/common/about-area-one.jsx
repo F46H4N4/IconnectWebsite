@@ -4,7 +4,7 @@ import React from 'react';
 
 // Images import
 import about_img_1 from "../../public/assets/img/about/about-bg-one.png";
-import about_img_3 from "../../public/assets/img/about/aboutoneblocks.png";
+import about_img_3 from "../../public/assets/img/about/blocks.png";
 
 // About data
 const about_data = [

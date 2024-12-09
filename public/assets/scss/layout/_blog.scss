@@ -31,7 +31,7 @@
             text-transform: uppercase;
             color: var(--tp-common-blue);
             font-family: var(--tp-ff-urban);
-            border: 1px solid rgba(91, 108, 255, 0.1);
+            // border: 1px solid rgba(91, 108, 255, 0.1);
             border-radius: 30px;
             display: inline-block;
             padding: 8px 12px;
@@ -51,7 +51,7 @@
                 content: '';
                 top: 8px;
                 left: 0;
-                height: 4px;
+                // height: 4px;
                 width: 4px;
                 border-radius: 50%;
                 background-color: #5F6168;;

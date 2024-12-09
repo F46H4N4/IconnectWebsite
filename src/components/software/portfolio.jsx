@@ -19,40 +19,39 @@ const BlogArea = () => {
                     </div>
                     <div className="row">
                         {blog_data.slice(0, 6).map((item, i) => (
-                            <div
-                                key={i}
-                                className="col-xl-4 col-lg-4 col-md-6 mb-60"
-                                onClick={() => (window.location.href = `/${item.slug}`)} // Navigate dynamically
-                                style={{ cursor: 'pointer' }} // Indicate the block is clickable
-                            >
-                                <div className="tp-blog-item">
-                                    {/* Blog Image */}
-                                    <div className="tp-blog-thumb fix">
-                                        <Image src={item.img} alt={item.title} />
-                                    </div>
+                            <div key={i} className="col-xl-4 col-lg-4 col-md-6 mb-60">
+                            <Link href={`/${item.slug}-project-details`} passHref>
+                            {/* <a style={{ textDecoration: 'none' }}> This ensures the whole block is clickable */}
+                                        <div className="tp-blog-item" style={{ cursor: 'pointer' }}>
+                                            {/* Blog Image */}
+                                            <div className="tp-blog-thumb fix">
+                                                <Image src={item.img} alt={item.title} />
+                                            </div>
 
-                                    {/* Blog Meta */}
-                                    <div className="tp-blog-meta d-flex align-items-center">
-                                        <div className={`tp-blog-category category-color-${item.color}`}>
-                                            <span>{item.category}</span>
+                                            {/* Blog Meta */}
+                                            <div className="tp-blog-meta d-flex align-items-center">
+                                                <div className={`tp-blog-category category-color-${item.color}`}>
+                                                    <span>{item.category}</span>
+                                                </div>
+                                                <div className="tp-blog-date">
+                                                    <span>{item.date}</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Blog Title */}
+                                            <div className="tp-blog-title-box">
+                                                <h4 className="tp-blog-title-sm">{item.title}</h4>
+                                            </div>
+
+                                            {/* Learn More Link */}
+                                            <div className="tp-blog-author-info-box d-flex align-items-center">
+                                                <span className="learn-more-link" style={{ fontSize: '17.5px', color: "#393939", lineHeight: '25.47px', letterSpacing: '1px',fontWeight:'400' }}>
+                                                    {item.desc}
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div className="tp-blog-date">
-                                            <span>{item.date}</span>
-                                        </div>
-                                    </div>
-
-                                    {/* Blog Title */}
-                                    <div className="tp-blog-title-box">
-                                        <h4 className="tp-blog-title-sm">{item.title}</h4>
-                                    </div>
-
-                                    {/* Learn More Link */}
-                                    <div className="tp-blog-author-info-box d-flex align-items-center">
-                                        <Link href='#' className="learn-more-link" style={{fontSize:'17.5px',color:"#393939" }}>
-                                           {item.desc}
-                                        </Link>
-                                    </div>
-                                </div>
+                                    {/* </a> */}
+                                </Link>
                             </div>
                         ))}
                     </div>
