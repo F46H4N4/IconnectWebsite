@@ -29,7 +29,6 @@ export default async (req, res) => {
                 secure: true,
                 auth: {
                     user: 'info@iconnect-kw.com',
-                    pass: 'GanKyG4Kolyx',
                 },
                 tls: {
                     rejectUnauthorized: false,
