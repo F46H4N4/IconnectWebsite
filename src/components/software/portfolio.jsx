@@ -24,9 +24,16 @@ const BlogArea = () => {
                             {/* <a style={{ textDecoration: 'none' }}> This ensures the whole block is clickable */}
                                         <div className="tp-blog-item" style={{ cursor: 'pointer' }}>
                                             {/* Blog Image */}
-                                            <div className="tp-blog-thumb fix">
-                                                <Image src={item.img} alt={item.title} />
-                                            </div>
+                                            <div className="tp-blog-thumb fix position-relative">
+                                            <Image src={item.img} alt={item.title} width={500} height={300} className="w-100" />
+
+                                            {/* Logo Overlay */}
+                                            {item.logo && (
+                                                <div className="logo-overlay">
+                                                    <Image src={item.logo} alt={`${item.title} Logo`} width={60} height={60} />
+                                                </div>
+                                            )}
+                                        </div>
 
                                             {/* Blog Meta */}
                                             <div className="tp-blog-meta d-flex align-items-center">
@@ -77,6 +84,22 @@ const BlogArea = () => {
                 .learn-more-link:hover i {
                     transform: translateX(3px); /* Arrow moves slightly on hover */
                 }
+                 .logo-overlay {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                // background: white;
+                padding: 5px;
+                border-top-right-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            }
+            .logo-overlay img {
+                max-width: 100%;
+                height: auto;
+            }
             `}</style>
         </>
     );

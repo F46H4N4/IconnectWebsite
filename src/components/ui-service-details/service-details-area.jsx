@@ -12,7 +12,7 @@ const service_details_content = {
         { id: 2, category: "Payment Solution", cls: "", link: "/paymentsolution-service-details" },
         { id: 3, category: "Security Solution", cls: "", link: "/securitysolution-service-details" },
         { id: 4, category: "App Development", cls: "", link: "/app_development-service-details" },
-        { id: 5, category: "Business Solution", cls: "", link: "/business-service-details" },
+        { id: 5, category: "Business Solution", cls: "", link: "/buisness-service-details" },
         { id: 6, category: "E-Commerce", cls: "", link: "/e-commerce-service-details" },
         { id: 7, category: "UI/UX Design", cls: "active", link: "/ui-service-details" },
     ],
@@ -62,23 +62,7 @@ const ServiceDetailsArea = () => {
                     <div className="col-xl-4 col-lg-4">
                         <div className="sv-details-widget">
                             {/* Service Categories */}
-                            <div className="sv-details-category mb-30">
-                                <div className="sv-details-category-title">
-                                    <h4 className="sv-details-title-sm">{category_title}</h4>
-                                </div>
-                                <div className="sv-details-category-list">
-                                    <ul>
-                                        {categories.map((item) => (
-                                            <li key={item.id} className={item.cls}>
-                                                <Link href={item.link} onClick={() => setSelectedCategory(item.category)}>
-                                                    <span>{item.category}</span>
-                                                    <i className="fal fa-angle-right"></i>
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
+                          
 
                             {/* Service Videos */}
                             <div className="tp-service__dashboard mb-30">
@@ -98,10 +82,26 @@ const ServiceDetailsArea = () => {
                             <div className="sv-details-social-box mb-30">
                                 <h4 className="sv-details-title-sm">Share it.</h4>
                                 <div className="sv-details-social-link">
-                                    <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                    <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                    <Link href="#"><i className="fab fa-instagram"></i></Link>
-                                    <Link href="#"><i className="fab fa-youtube"></i></Link>
+                                <Link
+                                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://iconnect-kw.com/')}`}
+                                target="_blank"
+                            >
+                                <i className="fab fa-facebook-f"></i>
+                            </Link>                                    
+        
+                            <Link
+                            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://iconnect-kw.com/')}&text=${encodeURIComponent('Check out our Service!')}`}
+                                target="_blank"
+                            >
+                                <i className="fab fa-twitter"></i>
+                            </Link>                                   
+                        
+                            <Link
+                            href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent('https://iconnect-kw.com/')}&title=${encodeURIComponent('Service Details')}`}
+                            target="_blank"
+                        >
+                            <i className="fab fa-linkedin-in"></i>
+                        </Link>
                                 </div>
                             </div>
                         </div>

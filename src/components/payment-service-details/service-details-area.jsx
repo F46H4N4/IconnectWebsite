@@ -12,7 +12,7 @@ const service_details_content = {
         { id: 2, category: "Payment Solution", cls: "active", link: "/paymentsolution-service-details" },
         { id: 3, category: "Security Solution", cls: "", link: "/securitysolution-service-details" },
         { id: 4, category: "App Development", cls: "", link: "/app_development-service-details" },
-        { id: 5, category: "Business Solution", cls: "", link: "/business-service-details" },
+        { id: 5, category: "Business Solution", cls: "", link: "/buisness-service-details" },
         { id: 6, category: "E-Commerce", cls: "", link: "/e-commerce-service-details" },
         { id: 7, category: "UI/UX Design", cls: "", link: "/ui-service-details" },
     ],
@@ -97,10 +97,26 @@ const ServiceDetailsArea = () => {
                             <div className="sv-details-social-box mb-30">
                                 <h4 className="sv-details-title-sm">Share it.</h4>
                                 <div className="sv-details-social-link">
-                                    <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                    <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                    <Link href="#"><i className="fab fa-instagram"></i></Link>
-                                    <Link href="#"><i className="fab fa-youtube"></i></Link>
+                                <Link
+                                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://iconnect-kw.com/')}`}
+                                target="_blank"
+                            >
+                                <i className="fab fa-facebook-f"></i>
+                            </Link>                                    
+        
+                            <Link
+                            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://iconnect-kw.com/')}&text=${encodeURIComponent('Check out our Service!')}`}
+                                target="_blank"
+                            >
+                                <i className="fab fa-twitter"></i>
+                            </Link>                                   
+                        
+                            <Link
+                            href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent('https://iconnect-kw.com/')}&title=${encodeURIComponent('Service Details')}`}
+                            target="_blank"
+                        >
+                            <i className="fab fa-linkedin-in"></i>
+                        </Link>
                                 </div>
                             </div>
                         </div>

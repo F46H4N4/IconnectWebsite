@@ -16,8 +16,8 @@ const inner_content = {
     {
       id: 1,
       icon: icon_1,
-      title: "hr@amiyon.com",
-      link: "mailto:hr@amiyon.com",
+      title: "info@iconnect-kw.com",
+      link: "mailto:info@iconnect-kw.com",
     },
     {
       id: 2,

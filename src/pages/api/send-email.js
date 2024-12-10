@@ -1,73 +1,64 @@
 import nodemailer from 'nodemailer';
 
-export default async (req, res) => {
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-    res.setHeader(
-        'Access-Control-Allow-Headers',
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-    );
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
 
-    if (req.method === 'OPTIONS') {
-        res.status(200).end();
-        return;
+  const { fullName, email, phone, message, captchaToken } = req.body;
+
+  // Validate CAPTCHA server-side
+  try {
+    const captchaResponse = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `secret=6LeAUpcqAAAAACJHgZ45kpf9VqddYsJwdjV41J3A&response=${captchaToken}`
+        }
+      );
+    const captchaResult = await captchaResponse.json();
+
+    if (!captchaResult.success) {
+      return res.status(400).json({ message: 'CAPTCHA validation failed' });
     }
+  } catch (error) {
+    return res.status(500).json({ message: 'CAPTCHA validation error' });
+  }
 
-    if (req.method === 'POST') {
-        const { email, fullName, phone, message } = req.body;
+  const transporter = nodemailer.createTransport({
+    host: 'mail.iconnect-kw.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'info@iconnect-kw.com',
+      pass: 'GanKyG4Kolyx'
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
 
-        try {
-            if (!fullName || !email || !phone || !message) {
-                return res.status(400).json({ message: 'Missing required fields' });
-            }
-
-            // Set up transporter using environment variables
-            const transporter = nodemailer.createTransport({
-                host: 'mail.iconnect-kw.com',
-                port: 465,
-                secure: true,
-                auth: {
-                    user: 'info@iconnect-kw.com',
-                },
-                tls: {
-                    rejectUnauthorized: false,
-                }
-            });
-
-            const mailOptions = {
-                from: 'info@iconnect-kw.com',
-                to: 'farhana2224u@gmail.com',
-                subject: 'Contact Us Form Submission',
-                html: `
-          <h3>New Contact Form Submission</h3>
-          <p><strong>Name:</strong> ${fullName}</p>
+  try {
+    const info = await transporter.sendMail({
+      from: 'info@iconnect-kw.com',
+      to: 'farhana2224u@gmail.com',
+      subject: 'New Contact Form Submission',
+      html: `
+        <div>
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Full Name:</strong> ${fullName}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Message:</strong> ${message}</p>
-        `,
-                text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
-            };
+          <h3>Message:</h3>
+          <p>${message}</p>
+        </div>
+      `
+    });
 
-            const info = await transporter.sendMail(mailOptions);
-            res.status(200).json({
-                message: 'Email Sent Successfully',
-                info: info.response
-            });
-
-        } catch (error) {
-            console.error('Detailed Email Error:', {
-                message: error.message,
-                stack: error.stack,
-                name: error.name
-            });
-
-            res.status(500).json({
-                message: 'Internal Server Error: Failed to Send Email',
-                error: error.message
-            });
-        }
-    } else {
-        res.status(405).json({ message: 'Method Not Allowed' });
-    }
-};
+    res.status(200).json({ message: 'Email sent successfully', messageId: info.messageId });
+  } catch (error) {
+    console.error('Email sending error:', error);
+    res.status(500).json({ message: 'Failed to send email' });
+  }
+}

@@ -9,6 +9,9 @@ import author_img_3 from "../../public/assets/img/blog/blog-avata-3.png";
 import img_4 from "../../public/assets/img/project/gym.png"
 import img_5 from "../../public/assets/img/project/booking.png"
 import img_6 from "../../public/assets/img/project/shop.png"
+import brand_logo_1 from "../../public/assets/img/project/erp_logo.png";
+import brand_logo_2 from "../../public/assets/img/project/noris_logo.png";
+import brand_logo_3 from "../../public/assets/img/project/paynet_logo.png";
 
 
 
@@ -20,6 +23,7 @@ const blog_data = [
         // category: "Crm Software",
         // color: "1",
         // date: "28 April, 2023",
+        logo:brand_logo_1,
         title: <>DietErp</>,
         slug:'dietErp',
         desc:'DietErp a comprehensive online platform for diet food delivery, enabling seamless meal planning, ordering, and delivery tailored to customer health goals.'
@@ -33,6 +37,7 @@ const blog_data = [
         // category: "Sales Tools",
         // color: "2",
         // date: "28 April, 2023",
+        logo:brand_logo_2,
         title: <>Norikspro</>,
         slug:'norikspro',
         desc:'Norikspro an advanced audit management platform to streamline auditing processes, ensuring accuracy, compliance, and efficient reporting for organizations'
@@ -43,6 +48,8 @@ const blog_data = [
     {
         id: 3, 
         img: img_3,
+        logo:brand_logo_3,
+
         // category: "Sales Management",
         // color: "3",
         // date: "28 April, 2023",

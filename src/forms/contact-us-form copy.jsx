@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import NiceSelect from "../ui/nice-select";
+import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsForm = () => {
@@ -6,22 +8,23 @@ const ContactUsForm = () => {
     fullName: "",
     email: "",
     phone: "",
+    inquiry: "Your Inquiry about",
     message: ""
   });
-  const [captchaToken, setCaptchaToken] = useState(null);
+  const [captchaToken, setCaptchaToken] = useState(null); // Captcha token state
   const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
+    setFormData(prevState => ({
       ...prevState,
       [name]: value
     }));
   };
 
   const handleCaptchaChange = (token) => {
-    setCaptchaToken(token);
+    setCaptchaToken(token); // Save captcha token
   };
 
   const handleSubmit = async (e) => {
@@ -36,28 +39,29 @@ const ContactUsForm = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, captchaToken })
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.message || 'Failed to send message');
-      }
+      await emailjs.send(
+        'service_vqamdie',
+        'template_3744asb',
+        {
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        },
+        '4oZhQBYXGSKWdRHWn'
+      );
 
       setErrorMessage('Message sent successfully!');
       setFormData({
         fullName: "",
         email: "",
         phone: "",
+        inquiry: "Your Inquiry about",
         message: ""
       });
-      setCaptchaToken(null); // Reset CAPTCHA
+      setCaptchaToken(null); // Reset captcha
     } catch (error) {
-      console.error('Submission Error:', error);
+      console.error('Email send error:', error);
       setErrorMessage('Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -129,10 +133,9 @@ const ContactUsForm = () => {
         </div>
         <div className="col-xxl-12 mb-30">
           <ReCAPTCHA
-            sitekey="6LeAUpcqAAAAAJl3ui_qFLa22xFVvQDopWNLe5CI" // Replace with your reCAPTCHA site key
+            sitekey="6Lfnj5YqAAAAAEWIM9qoo_SmJG_p0l76yJTtET06" // Replace with your reCAPTCHA site key
             onChange={handleCaptchaChange}
           />
-     
         </div>
         <div className="col-xxl-12">
           <div className="postbox__btn-box">

@@ -105,7 +105,7 @@ const HeroArea = () => {
                   <Image 
                     src={img_2} 
                     alt="Swipe Animation" 
-                    className="responsive-image"
+                    className="responsive-image tab-image"
                   />
                 </div> */}
               </div>
@@ -114,6 +114,18 @@ const HeroArea = () => {
         </div>
       </div>
       <style jsx>{`
+
+          // .tab-image {
+          //   width: 150%; /* Increase width */
+          //   height: auto; /* Maintain aspect ratio */
+          //   transition: all 0.3s ease-in-out; /* Add smooth resizing animation */
+          // }
+
+          // @media (max-width: 768px) {
+          //   .tab-image {
+          //     width: 100%; /* Adjust for smaller screens */
+          //   }
+          // }
         .tp-hero-area {
           position: relative;
           overflow: hidden;

@@ -36,7 +36,7 @@ const footer_content = {
         { name: 'Payment Solution', link: '/paymentsolution-service-details' },
         { name: 'Security Solution', link: '/securitysolution-service-details' },
         { name: 'App Development', link: '/app_development-service-details' },
-        { name: 'Business Solution', link: '/business-service-details' },
+        { name: 'Business Solution', link: '/buisness-service-details' },
         { name: 'E-commerce', link: '/e-commerce-service-details' },
       ],
     },
