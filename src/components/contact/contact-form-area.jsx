@@ -41,7 +41,7 @@ const ContactFormArea = () => {
                                  />
                                </Link>
                                <Link href="#"><i className="fab fa-linkedin-in"></i></Link>
-                                 <Link href="#"><i className="fab fa-instagram"></i></Link>
+                                 <Link href="https://www.instagram.com/iconnect_kw/"><i className="fab fa-instagram"></i></Link>
                               </div>
                               {/* <div className="contact-form-section-img">
                                  <Image src={img} alt="theme-pure" />
